@@ -65,14 +65,13 @@
       <div class="container">
         <h2 class="section-title" data-en="Projects" data-sv="Projekt">Projects</h2>
         <p class="section-text"
-          data-en="Replace these cards with your real projects. Keep the focus on what you programmed, the technical challenges, and the tools you used."
-          data-sv="Ersätt de här korten med dina riktiga projekt. Fokusera på vad du programmerade, de tekniska utmaningarna och vilka verktyg du använde.">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
+          data-en="A selection of projects and experiments created during my studies and personal work. Each project focuses on different areas of game development such as rendering, AI, gameplay systems and tools."
+          data-sv="Ett urval av projekt och experiment jag har gjort under studier och eget arbete. Projekten fokuserar på olika områden inom spelutveckling, som rendering, AI, gameplay-system och verktyg.">
+          A selection of projects and experiments created during my studies and personal work. Each project focuses on different areas of game development such as rendering, AI, gameplay systems and tools.        </p>
 
         <div class="projects-grid">
           <article class="project-card">
-            <div class="project-media">Add screenshot / GIF here</div>
+            <div class="project-media">Gameplay capture</div>
             <div class="project-content">
               <h3 class="project-title">Rendering Engine Project</h3>
               <p class="project-desc"
@@ -90,7 +89,7 @@
           </article>
 
           <article class="project-card">
-            <div class="project-media">Add screenshot / GIF here</div>
+            <div class="project-media">Gameplay capture</div>
             <div class="project-content">
               <h3 class="project-title">AI Systems</h3>
               <p class="project-desc"
@@ -108,7 +107,7 @@
           </article>
 
           <article class="project-card">
-            <div class="project-media">Add screenshot / GIF here</div>
+            <div class="project-media">Gameplay capture</div>
             <div class="project-content">
               <h3 class="project-title">Procedural Generation</h3>
               <p class="project-desc"
@@ -126,7 +125,7 @@
           </article>
 
           <article class="project-card">
-            <div class="project-media">Add screenshot / GIF here</div>
+            <div class="project-media">Gameplay capture</div>
             <div class="project-content">
               <h3 class="project-title">Gameplay Systems</h3>
               <p class="project-desc"
@@ -194,13 +193,13 @@
         <h2 class="section-title" data-en="Contact" data-sv="Kontakt">Contact</h2>
         <div class="contact-card">
           <p
-            data-en="Add your contact details here when you are ready to share the site publicly."
-            data-sv="Lägg till dina kontaktuppgifter här när du är redo att dela sidan offentligt.">
-            Lorem ipsum
+            data-en="Feel free to reach out if you'd like to talk about game development, collaboration or internship opportunities."
+            data-sv="Hör gärna av dig om du vill prata om spelutveckling, samarbeten eller praktikmöjligheter.">
+            Feel free to reach out if you'd like to talk about game development, collaboration or internship opportunities.
           </p>
           <div class="contact-links">
             <a class="button" href="https://github.com/camilochaveztorres" target="_blank" rel="noreferrer">GitHub</a>
-            <a class="button" href="mailto:your-email@example.com">Email</a>
+            <a class="button" href="mailto:elcamiloc@live.com">Email</a>
             <a class="button" href="#">LinkedIn</a>
           </div>
         </div>
@@ -213,45 +212,6 @@
       © 2026 Camilo Chavez Torres
     </div>
   </footer>
-
-  <script>
-    const body = document.body;
-    const html = document.documentElement;
-    const themeToggleButton = document.getElementById('theme-toggle');
-    const languageToggleButton = document.getElementById('language-toggle');
-
-    function applyTheme(theme) {
-      body.classList.toggle('light-theme', theme === 'light');
-      themeToggleButton.textContent = theme === 'light' ? '🌙 Dark' : '☀️ Light';
-      localStorage.setItem('theme', theme);
-    }
-
-    function applyLanguage(language) {
-      html.lang = language;
-
-      document.querySelectorAll('[data-en]').forEach((element) => {
-        element.textContent = language === 'sv' ? element.dataset.sv : element.dataset.en;
-      });
-
-      languageToggleButton.textContent = language === 'sv' ? 'EN' : 'SV';
-      localStorage.setItem('language', language);
-    }
-
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    const savedLanguage = localStorage.getItem('language') || 'en';
-
-    applyTheme(savedTheme);
-    applyLanguage(savedLanguage);
-
-    themeToggleButton.addEventListener('click', () => {
-      const nextTheme = body.classList.contains('light-theme') ? 'dark' : 'light';
-      applyTheme(nextTheme);
-    });
-
-    languageToggleButton.addEventListener('click', () => {
-      const nextLanguage = html.lang === 'sv' ? 'en' : 'sv';
-      applyLanguage(nextLanguage);
-    });
-  </script>
+<script src="script.js"></script>
 </body>
 </html>
