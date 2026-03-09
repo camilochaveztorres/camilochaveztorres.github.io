@@ -342,3 +342,11 @@ body.light-theme .control-button {
 body.light-theme .button-primary {
   color: #07111d;
 }
+.nav a {
+  color: var(--text);
+}
+
+.nav a:hover {
+  text-decoration: none;
+  color: var(--accent);
+}
