@@ -198,6 +198,16 @@ h1 {
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
 }
 
+.project-points {
+  margin: 0 0 1rem;
+  padding-left: 1.2rem;
+  color: var(--muted);
+}
+
+.project-points li {
+  margin-bottom: 0.5rem;
+}
+
 .hero-card,
 .about-card,
 .contact-card,
