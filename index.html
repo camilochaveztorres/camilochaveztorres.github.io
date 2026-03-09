@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,12 +10,18 @@
   <header class="nav">
     <div class="container nav-inner">
       <div class="brand">Camilo Chavez Torres</div>
+
       <nav class="nav-links">
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a href="#projects" data-en="Projects" data-sv="Projekt">Projects</a>
+        <a href="#skills" data-en="Skills" data-sv="Färdigheter">Skills</a>
+        <a href="#about" data-en="About" data-sv="Om mig">About</a>
+        <a href="#contact" data-en="Contact" data-sv="Kontakt">Contact</a>
       </nav>
+
+      <div class="top-controls">
+        <button class="control-button" id="theme-toggle" type="button">🌙 Light</button>
+        <button class="control-button" id="language-toggle" type="button">SV</button>
+      </div>
     </div>
   </header>
 
@@ -23,26 +29,33 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <div class="eyebrow">Game Programmer • The Game Assembly</div>
-          <h1>Building gameplay, rendering and AI systems.</h1>
-          <p>
-            I’m Camilo Chavez Torres, a game programming student focused on C++,
-            DirectX, gameplay systems, AI and technical problem solving. This site
-            is my portfolio where I collect projects, experiments and things I’ve built.
+          <div class="eyebrow"
+            data-en="Game Programmer • The Game Assembly"
+            data-sv="Spelprogrammerare • The Game Assembly">Game Programmer • The Game Assembly</div>
+
+          <h1
+            data-en="Building gameplay, rendering and AI systems."
+            data-sv="Bygger gameplay-, rendering- och AI-system.">Building gameplay, rendering and AI systems.</h1>
+
+          <p
+            data-en="I’m Camilo Chavez Torres, a game programming student focused on C++, DirectX, gameplay systems, AI and technical problem solving. This site is my portfolio where I collect projects, experiments and things I’ve built."
+            data-sv="Jag är Camilo Chavez Torres, student inom spelprogrammering med fokus på C++, DirectX, gameplay-system, AI och teknisk problemlösning. Det här är min portfolio där jag samlar projekt, experiment och saker jag byggt.">
+            I’m Camilo Chavez Torres, a game programming student focused on C++, DirectX, gameplay systems, AI and technical problem solving. This site is my portfolio where I collect projects, experiments and things I’ve built.
           </p>
+
           <div class="hero-actions">
-            <a class="button button-primary" href="#projects">View Projects</a>
+            <a class="button button-primary" href="#projects" data-en="View Projects" data-sv="Se projekt">View Projects</a>
             <a class="button" href="https://github.com/camilochaveztorres" target="_blank" rel="noreferrer">GitHub</a>
           </div>
         </div>
 
         <aside class="hero-card">
-          <h2>Current focus</h2>
+          <h2 data-en="Current focus" data-sv="Fokus just nu">Current focus</h2>
           <ul class="hero-list">
-            <li>C++ gameplay programming</li>
-            <li>DirectX rendering and shaders</li>
-            <li>AI behaviours and decision systems</li>
-            <li>Portfolio projects for internship applications</li>
+            <li data-en="C++ gameplay programming" data-sv="Gameplay-programmering i C++">C++ gameplay programming</li>
+            <li data-en="DirectX rendering and shaders" data-sv="DirectX-rendering och shaders">DirectX rendering and shaders</li>
+            <li data-en="AI behaviours and decision systems" data-sv="AI-beteenden och beslutssystem">AI behaviours and decision systems</li>
+            <li data-en="Portfolio projects for internship applications" data-sv="Portfolio-projekt för praktikansökningar">Portfolio projects for internship applications</li>
           </ul>
         </aside>
       </div>
@@ -50,9 +63,11 @@
 
     <section id="projects">
       <div class="container">
-        <h2 class="section-title">Projects</h2>
-        <p class="section-text">
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        <h2 class="section-title" data-en="Projects" data-sv="Projekt">Projects</h2>
+        <p class="section-text"
+          data-en="Replace these cards with your real projects. Keep the focus on what you programmed, the technical challenges, and the tools you used."
+          data-sv="Ersätt de här korten med dina riktiga projekt. Fokusera på vad du programmerade, de tekniska utmaningarna och vilka verktyg du använde.">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </p>
 
         <div class="projects-grid">
@@ -60,16 +75,17 @@
             <div class="project-media">Add screenshot / GIF here</div>
             <div class="project-content">
               <h3 class="project-title">Rendering Engine Project</h3>
-              <p class="project-desc">
-                A rendering-focused project where I worked with graphics programming,
-                materials, shaders and real-time rendering techniques.
+              <p class="project-desc"
+                data-en="A rendering-focused project where I worked with graphics programming, materials, shaders and real-time rendering techniques."
+                data-sv="Ett renderingfokuserat projekt där jag arbetade med grafikprogrammering, material, shaders och realtidsrendering.">
+                A rendering-focused project where I worked with graphics programming, materials, shaders and real-time rendering techniques.
               </p>
               <div class="tags">
                 <span class="tag">C++</span>
                 <span class="tag">DirectX 11</span>
                 <span class="tag">Shaders</span>
               </div>
-              <a href="#">Project details</a>
+              <a href="#" data-en="Project details" data-sv="Projektinfo">Project details</a>
             </div>
           </article>
 
@@ -77,16 +93,17 @@
             <div class="project-media">Add screenshot / GIF here</div>
             <div class="project-content">
               <h3 class="project-title">AI Systems</h3>
-              <p class="project-desc">
-                Experiments with steering behaviours, decision trees, world interfacing,
-                and other gameplay AI systems.
+              <p class="project-desc"
+                data-en="Experiments with steering behaviours, decision trees, world interfacing, and other gameplay AI systems."
+                data-sv="Experiment med steering behaviours, beslutsträd, world interfacing och andra AI-system för gameplay.">
+                Experiments with steering behaviours, decision trees, world interfacing, and other gameplay AI systems.
               </p>
               <div class="tags">
                 <span class="tag">AI</span>
                 <span class="tag">Gameplay</span>
                 <span class="tag">C++</span>
               </div>
-              <a href="#">Project details</a>
+              <a href="#" data-en="Project details" data-sv="Projektinfo">Project details</a>
             </div>
           </article>
 
@@ -94,16 +111,17 @@
             <div class="project-media">Add screenshot / GIF here</div>
             <div class="project-content">
               <h3 class="project-title">Procedural Generation</h3>
-              <p class="project-desc">
-                Terrain and level generation experiments using techniques like Perlin noise
-                and cellular automata.
+              <p class="project-desc"
+                data-en="Terrain and level generation experiments using techniques like Perlin noise and cellular automata."
+                data-sv="Experiment med terräng- och ban-generering med tekniker som Perlin noise och cellular automata.">
+                Terrain and level generation experiments using techniques like Perlin noise and cellular automata.
               </p>
               <div class="tags">
                 <span class="tag">PCG</span>
                 <span class="tag">C++</span>
                 <span class="tag">Tools</span>
               </div>
-              <a href="#">Project details</a>
+              <a href="#" data-en="Project details" data-sv="Projektinfo">Project details</a>
             </div>
           </article>
 
@@ -111,16 +129,17 @@
             <div class="project-media">Add screenshot / GIF here</div>
             <div class="project-content">
               <h3 class="project-title">Gameplay Systems</h3>
-              <p class="project-desc">
-                Systems work involving HUD, movement, controller support, health systems
-                and runtime game logic.
+              <p class="project-desc"
+                data-en="Systems work involving HUD, movement, controller support, health systems and runtime game logic."
+                data-sv="Systemarbete med HUD, rörelse, handkontrollsstöd, hälsosystem och spellogik i runtime.">
+                Systems work involving HUD, movement, controller support, health systems and runtime game logic.
               </p>
               <div class="tags">
                 <span class="tag">Systems</span>
                 <span class="tag">UI</span>
                 <span class="tag">Gameplay</span>
               </div>
-              <a href="#">Project details</a>
+              <a href="#" data-en="Project details" data-sv="Projektinfo">Project details</a>
             </div>
           </article>
         </div>
@@ -129,23 +148,29 @@
 
     <section id="skills">
       <div class="container">
-        <h2 class="section-title">Skills</h2>
-        <p class="section-text">
+        <h2 class="section-title" data-en="Skills" data-sv="Färdigheter">Skills</h2>
+        <p class="section-text" data-en="A simple overview of the areas I work in most." data-sv="En enkel översikt över de områden jag arbetar mest med.">
           A simple overview of the areas I work in most.
         </p>
 
         <div class="skills-grid">
           <div class="skill-card">
-            <h3>Programming</h3>
-            <p>C++, gameplay systems, debugging, architecture and engine-side logic.</p>
+            <h3 data-en="Programming" data-sv="Programmering">Programming</h3>
+            <p data-en="C++, gameplay systems, debugging, architecture and engine-side logic." data-sv="C++, gameplay-system, debugging, arkitektur och logik på engine-sidan.">
+              C++, gameplay systems, debugging, architecture and engine-side logic.
+            </p>
           </div>
           <div class="skill-card">
-            <h3>Graphics</h3>
-            <p>DirectX 11, shaders, materials, rendering pipeline, transforms and cameras.</p>
+            <h3 data-en="Graphics" data-sv="Grafik">Graphics</h3>
+            <p data-en="DirectX 11, shaders, materials, rendering pipeline, transforms and cameras." data-sv="DirectX 11, shaders, material, renderingspipeline, transforms och kameror.">
+              DirectX 11, shaders, materials, rendering pipeline, transforms and cameras.
+            </p>
           </div>
           <div class="skill-card">
-            <h3>AI</h3>
-            <p>Steering behaviours, boids, decision trees, world interfacing and controller systems.</p>
+            <h3 data-en="AI" data-sv="AI">AI</h3>
+            <p data-en="Steering behaviours, boids, decision trees, world interfacing and controller systems." data-sv="Steering behaviours, boids, beslutsträd, world interfacing och controller-system.">
+              Steering behaviours, boids, decision trees, world interfacing and controller systems.
+            </p>
           </div>
         </div>
       </div>
@@ -153,12 +178,12 @@
 
     <section id="about">
       <div class="container">
-        <h2 class="section-title">About</h2>
+        <h2 class="section-title" data-en="About" data-sv="Om mig">About</h2>
         <div class="about-card">
-          <p>
-            I study game programming at The Game Assembly in Malmö. I enjoy solving technical problems,
-            especially when the result becomes visible on screen, whether that means rendering, AI,
-            gameplay systems or tools.
+          <p
+            data-en="I study game programming at The Game Assembly in Malmö. I enjoy solving technical problems, especially when the result becomes visible on screen, whether that means rendering, AI, gameplay systems or tools."
+            data-sv="Jag studerar spelprogrammering på The Game Assembly i Malmö. Jag gillar att lösa tekniska problem, särskilt när resultatet syns direkt på skärmen, oavsett om det gäller rendering, AI, gameplay-system eller verktyg.">
+            I study game programming at The Game Assembly in Malmö. I enjoy solving technical problems, especially when the result becomes visible on screen, whether that means rendering, AI, gameplay systems or tools.
           </p>
         </div>
       </div>
@@ -166,9 +191,11 @@
 
     <section id="contact">
       <div class="container">
-        <h2 class="section-title">Contact</h2>
+        <h2 class="section-title" data-en="Contact" data-sv="Kontakt">Contact</h2>
         <div class="contact-card">
-          <p>
+          <p
+            data-en="Add your contact details here when you are ready to share the site publicly."
+            data-sv="Lägg till dina kontaktuppgifter här när du är redo att dela sidan offentligt.">
             Lorem ipsum
           </p>
           <div class="contact-links">
@@ -182,10 +209,49 @@
   </main>
 
   <footer>
-    <div class="container">
+    <div class="container" data-en="© 2026 Camilo Chavez Torres" data-sv="© 2026 Camilo Chavez Torres">
       © 2026 Camilo Chavez Torres
     </div>
   </footer>
-  <script src="script.js"></script>
+
+  <script>
+    const body = document.body;
+    const html = document.documentElement;
+    const themeToggleButton = document.getElementById('theme-toggle');
+    const languageToggleButton = document.getElementById('language-toggle');
+
+    function applyTheme(theme) {
+      body.classList.toggle('light-theme', theme === 'light');
+      themeToggleButton.textContent = theme === 'light' ? '🌙 Dark' : '☀️ Light';
+      localStorage.setItem('theme', theme);
+    }
+
+    function applyLanguage(language) {
+      html.lang = language;
+
+      document.querySelectorAll('[data-en]').forEach((element) => {
+        element.textContent = language === 'sv' ? element.dataset.sv : element.dataset.en;
+      });
+
+      languageToggleButton.textContent = language === 'sv' ? 'EN' : 'SV';
+      localStorage.setItem('language', language);
+    }
+
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    const savedLanguage = localStorage.getItem('language') || 'en';
+
+    applyTheme(savedTheme);
+    applyLanguage(savedLanguage);
+
+    themeToggleButton.addEventListener('click', () => {
+      const nextTheme = body.classList.contains('light-theme') ? 'dark' : 'light';
+      applyTheme(nextTheme);
+    });
+
+    languageToggleButton.addEventListener('click', () => {
+      const nextLanguage = html.lang === 'sv' ? 'en' : 'sv';
+      applyLanguage(nextLanguage);
+    });
+  </script>
 </body>
 </html>
