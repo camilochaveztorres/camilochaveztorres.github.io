@@ -167,6 +167,10 @@ h1 {
   font-size: 1.05rem;
 }
 
+.hero h1 {
+  max-width: 10ch;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -216,6 +220,15 @@ h1 {
   background: linear-gradient(180deg, var(--card) 0%, var(--card-2) 100%);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
+}
+
+.project-card a {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.project-card a:hover {
+  color: var(--accent-2);
 }
 
 .hero-card {
@@ -290,18 +303,25 @@ section {
   display: block;
 }
 
+.project-content a {
+  display: inline-block;
+  margin-top: 0.25rem;
+  font-weight: 700;
+}
+
 .project-content {
-  padding: 1.25rem;
+  padding: 1.5rem;
 }
 
 .project-title {
   margin: 0 0 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .project-desc {
-  margin: 0 0 1rem;
+  margin: 0 0 0.75rem;
   color: var(--muted);
+  min-height: 4.5rem;
 }
 
 .tags {
@@ -359,6 +379,7 @@ footer {
 }
 
 @media (max-width: 900px) {
+
   .hero-grid,
   .projects-grid,
   .skills-grid {
@@ -374,7 +395,11 @@ footer {
   }
 
   .nav-inner {
-    align-items: flex-start;
-    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    flex-wrap: wrap;
   }
 }
