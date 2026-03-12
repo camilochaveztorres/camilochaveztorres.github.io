@@ -369,6 +369,10 @@ footer {
     padding-top: 3.5rem;
   }
 
+  .nav {
+    position: static;
+  }
+
   .nav-inner {
     align-items: flex-start;
     flex-direction: column;
