@@ -133,7 +133,7 @@ a:hover {
 }
 
 .hero {
-  padding: 2.2rem 0 1.5rem;
+  padding: 2.5rem 0 1.75rem;
 }
 
 .hero-compact {
@@ -186,7 +186,8 @@ h1 {
 .hero-lead {
   font-size: 1.15rem;
   font-weight: 500;
-  margin: 0 0 0.6rem;
+  margin: 0 0 1.25rem;
+  color: var(--text);
 }
 
 .hero-tech {
@@ -288,11 +289,11 @@ h1 {
 
 .hero-label {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 0.7rem;
+  font-size: 0.72rem;
   color: var(--muted);
-  margin-top: 0.8rem;
-  margin-bottom: 0.3rem;
+  margin: 0 0 0.45rem;
   text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 section {
