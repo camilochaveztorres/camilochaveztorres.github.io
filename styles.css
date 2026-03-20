@@ -466,6 +466,7 @@ footer {
 
   .nav {
     position: static;
+    backdrop-filter: blur(12px);
   }
 
   .nav-inner {
