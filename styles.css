@@ -101,6 +101,19 @@ a:hover {
   gap: 1rem;
 }
 
+.nav-links a {
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #7dd3fc; 
+}
+
+body.light-theme .nav-links a:hover {
+  color: #2563eb; 
+}
+
 .nav a {
   color: var(--text);
 }
@@ -247,6 +260,24 @@ h1 {
 .project-points li {
   margin-bottom: 0.5rem;
 }
+
+.project-card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.project-card-link:hover {
+  text-decoration: none;
+}
+
+.project-card-link:hover .project-title,
+.project-card-link:hover .project-desc,
+.project-card-link:hover .tag {
+  text-decoration: none;
+}
+
+
 
 .hero-card,
 .about-card,
