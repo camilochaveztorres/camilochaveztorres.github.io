@@ -483,6 +483,35 @@ footer {
   border: 0;
 }
 
+.featured-project {
+  grid-column: 1 / -1;
+}
+
+.featured-project .project-card {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  min-height: 420px;
+}
+
+.featured-project .project-media {
+  aspect-ratio: auto;
+  height: 100%;
+}
+
+.featured-project .project-content {
+  padding: 2rem;
+  justify-content: center;
+}
+
+.featured-project .project-title {
+  font-size: 2rem;
+}
+
+.featured-project .project-desc {
+  font-size: 1.05rem;
+  min-height: unset;
+}
+
 @media (max-width: 900px) {
 
   .hero-grid,
@@ -507,5 +536,17 @@ footer {
     gap: 1rem;
     padding: 1rem 0;
     flex-wrap: wrap;
+  }
+  .featured-project .project-card {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .featured-project .project-media {
+    aspect-ratio: 16 / 9;
+  }
+
+  .featured-project .project-title {
+    font-size: 1.5rem;
   }
 }
