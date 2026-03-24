@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,245 +5,190 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Beak Noir — Camilo Chavez Torres</title>
+    <title>Spite - Ashes of Ephtael — Camilo Chavez Torres</title>
 
     <link rel="icon" type="image/png" sizes="16x16" href="../media/images/favicon/favicon16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../media/images/favicon/favicon32.png">
 
     <link rel="stylesheet" href="../styles.css">
-
 </head>
 
 <body>
 
-    <header class="nav">
-        <div class="container nav-inner">
+<header class="nav">
+    <div class="container nav-inner">
 
-            <div class="brand">Camilo Chavez Torres</div>
+        <div class="brand">Camilo Chavez Torres</div>
 
-            <nav class="nav-links">
-                <a href="../index.html">Home</a>
-                <a href="../index.html#projects">Projects</a>
-                <a href="../index.html#about">About</a>
-                <a href="../index.html#contact">Contact</a>
-            </nav>
+        <nav class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="../index.html#projects">Projects</a>
+            <a href="../index.html#about">About</a>
+            <a href="../index.html#contact">Contact</a>
+        </nav>
 
-            <div class="top-controls">
-                <button class="control-button" id="theme-toggle">🌙 Light</button>
-                <button class="control-button" id="language-toggle">SV</button>
+        <div class="top-controls">
+            <button class="control-button" id="theme-toggle">🌙 Light</button>
+            <button class="control-button" id="language-toggle">SV</button>
+        </div>
+
+    </div>
+</header>
+
+<main>
+    <section>
+    <div class="container">
+
+        <h2 class="section-title">Gameplay</h2>
+
+        <div class="video-wrapper">
+            <iframe 
+                src="https://www.youtube.com/embed/XlcdTi2Ujp4"
+                title="Spite Gameplay"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+    </div>
+</section>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="container hero-grid">
+
+        <div>
+            <div class="eyebrow">
+                Team Project • Custom Engine (Lamp Engine)
+            </div>
+
+            <h1>Spite - Ashes of Ephtael</h1>
+
+            <p>
+                Spite is a Diablo-inspired action RPG developed in a team environment using our in-house engine, Lamp Engine.
+                The project focused on combat readability, enemy behaviour and responsive top-down gameplay.
+            </p>
+
+            <div class="hero-actions">
+                <a class="button button-primary" href="../index.html#projects">
+                    Back to Projects
+                </a>
+            </div>
+        </div>
+
+        <aside class="hero-card">
+            <h2>My Contribution</h2>
+
+            <ul class="hero-list">
+                <li>Enemy AI and behaviour implementation</li>
+                <li>Ranged enemy archetype (projectile-based attacks)</li>
+                <li>State machine design for enemy logic</li>
+                <li>Enemy animation integration</li>
+                <li>CameraManager and InputManager systems</li>
+            </ul>
+        </aside>
+
+    </div>
+</section>
+
+
+<!-- OVERVIEW -->
+<section>
+    <div class="container">
+
+        <h2 class="section-title">Overview</h2>
+
+        <div class="about-card">
+            <p>
+                Spite was built around fast-paced combat inspired by Diablo-style gameplay.
+                A key focus was making enemy behaviour readable and responsive, ensuring the player could understand and react to threats during combat.
+            </p>
+
+            <p>
+                My work was primarily focused on enemy systems, where I designed and implemented behaviour for a ranged enemy type that pressures the player from a distance using projectile attacks.
+                This required structuring behaviour logic, integrating animation and ensuring the enemy fit naturally into the combat flow.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- SYSTEMS -->
+<section>
+    <div class="container">
+
+        <h2 class="section-title">Systems & Features</h2>
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+                <h3>Enemy AI & State Machine</h3>
+                <p>
+                    Enemy behaviour was implemented using a state machine to clearly define transitions between states such as idle, chase and attack.
+                    This approach made behaviour predictable, extendable and easier to debug within the combat system.
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Ranged Enemy Behaviour</h3>
+                <p>
+                    I developed a ranged enemy archetype that attacks the player using projectile-based mechanics.
+                    The goal was to create pressure at a distance while maintaining clear and readable attack patterns.
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Animation Integration</h3>
+                <p>
+                    Integrated enemy animations with gameplay logic to ensure actions such as attacks and movement aligned visually with behaviour states.
+                    This was important for readability and player feedback.
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Camera & Input Systems</h3>
+                <p>
+                    Contributed to systems such as CameraManager and InputManager, helping ensure responsive controls and consistent camera behaviour during gameplay.
+                </p>
             </div>
 
         </div>
-    </header>
 
+    </div>
+</section>
 
 
-    <main>
-        <section class="hero">
-            <div class="container hero-grid">
-                <div>
-                    <div class="eyebrow" data-en="Team Project • The Game Assembly"
-                        data-sv="Teamprojekt • The Game Assembly">
+<!-- TECH TAKEAWAYS -->
+<section>
+    <div class="container">
 
-                        Team Project • The Game Assembly
+        <h2 class="section-title">Technical Takeaways</h2>
 
-                    </div>
-                    <h1 data-en="Beak Noir" data-sv="Beak Noir">
+        <div class="about-card">
+            <p>
+                This project gave me practical experience working inside a custom engine and building gameplay systems from the ground up.
+                I gained a deeper understanding of how AI, animation and input systems interact to create a cohesive gameplay experience.
+            </p>
 
-                        Beak Noir
-
-                    </h1>
-                    <p data-en="Beak Noir is a top-down action shooter developed in a team production environment at The Game Assembly. The game focuses on fast-paced combat, player mobility and situational awareness in a dark stylized world."
-                        data-sv="Beak Noir är ett top-down actionspel utvecklat i grupp på The Game Assembly. Spelet fokuserar på snabb strid, rörlighet och situationsmedvetenhet i en mörk stiliserad värld.">
-
-                        Beak Noir is a top-down action shooter developed in a team production environment at The Game
-                        Assembly. The game focuses on fast-paced combat, player mobility and situational awareness in a
-                        dark stylized world.
-
-                    </p>
-
-                    <div class="hero-actions">
-
-                        <a class="button button-primary" href="../index.html#projects" data-en="Back to Projects"
-                            data-sv="Tillbaka till projekt">
-
-                            Back to Projects
-
-                        </a>
-                    </div>
-                </div>
-                <aside class="hero-card">
-
-                    <h2 data-en="My role" data-sv="Min roll">My role</h2>
-
-                    <ul class="hero-list">
-
-                        <li data-en="Xbox controller support" data-sv="Xbox controller-stöd">
-                            Xbox controller support
-                        </li>
-
-                        <li data-en="Player movement systems including dash" data-sv="Spelarrörelse inklusive dash">
-                            Player movement systems including dash
-                        </li>
-
-                        <li data-en="HUD implementation (health and ammo)"
-                            data-sv="HUD implementation (hälsa och ammunition)">
-                            HUD implementation (health and ammo)
-                        </li>
-
-                        <li data-en="Health and ammo gameplay systems"
-                            data-sv="Gameplay-system för hälsa och ammunition">
-                            Health and ammo gameplay systems
-                        </li>
-
-                        <li data-en="Gameplay implementation in TGE" data-sv="Gameplay-implementation i TGE">
-                            Gameplay implementation in TGE
-                        </li>
-
-                    </ul>
-
-                </aside>
-
-            </div>
-
-        </section>
-        <section>
-            <div class="container">
-
-                <h2 class="section-title" data-en="Trailer" data-sv="Trailer">
-
-                    Trailer
-
-                </h2>
-
-
-                <div class="video-container">
-
-                    <iframe width="100%" height="500" src="https://www.youtube.com/embed/gxaEJ56esTE"
-                        title="Beak Noir Trailer" frameborder="0" allowfullscreen>
-
-                    </iframe>
-
-                </div>
-
-            </div>
-
-        </section>
-        <section>
-
-            <div class="container">
-
-                <h2 class="section-title" data-en="Feature Highlights" data-sv="Gameplayhöjdpunkter">
-
-                    Feature Highlights
-
-                </h2>
-
-
-                <div class="skills-grid">
-
-
-                    <div class="skill-card">
-
-                        <h3 data-en="Player Movement & Dash" data-sv="Spelarrörelse & dash">
-                            Player Movement & Dash
-                        </h3>
-
-                        <p data-en="I worked on player movement including dash mechanics and responsiveness. Movement was a core part of the gameplay and needed to feel smooth and reactive during combat."
-                            data-sv="Jag arbetade med spelarrörelse inklusive dash-mekanik. Rörelse var en central del av gameplay och behövde kännas responsiv under strid.">
-
-                            I worked on player movement including dash mechanics and responsiveness.
-
-                        </p>
-                        <!-- VIDEO PLACEHOLDER -->
-
-                        <div class="video-container">
-
-                            <iframe width="100%" height="315" src="" title="Dash System Gameplay" frameborder="0"
-                                allowfullscreen>
-
-                            </iframe>
-
-                        </div>
-
-                    </div>
-                    <div class="skill-card">
-
-                        <h3 data-en="HUD, Health & Ammo Systems" data-sv="HUD, hälsa & ammunition">
-                            HUD, Health & Ammo Systems
-                        </h3>
-
-                        <p data-en="I worked on the HUD and systems that handle player health and ammunition. The goal was to communicate important gameplay information clearly during combat."
-                            data-sv="Jag arbetade med HUD:en samt systemen för spelarens hälsa och ammunition. Målet var att tydligt kommunicera viktig gameplay-information under strid.">
-
-                            I worked on the HUD and gameplay systems for health and ammo.
-
-                        </p>
-                        <!-- VIDEO PLACEHOLDER -->
-
-                        <div class="video-container">
-
-                            <iframe width="100%" height="315" src="" title="HUD Gameplay" frameborder="0"
-                                allowfullscreen>
-
-                            </iframe>
-
-                        </div>
-
-                    </div>
-                    <div class="skill-card">
-
-                        <h3 data-en="Controller Support" data-sv="Handkontroll">
-                            Controller Support
-                        </h3>
-
-                        <p data-en="I implemented Xbox controller support so the game can be fully played with a gamepad."
-                            data-sv="Jag implementerade stöd för Xbox-kontroller så att spelet kan spelas med handkontroll.">
-
-                            I implemented Xbox controller support.
-
-                        </p>
-
-                    </div>
-
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <section>
-
-            <div class="container">
-
-                <h2 class="section-title" data-en="Challenges & Lessons" data-sv="Utmaningar & lärdomar">
-                    Challenges & Lessons
-                </h2>
-
-                <div class="about-card">
-
-                    <p data-en="Working on Beak Noir was a valuable experience in learning how to develop gameplay systems in a team environment and inside the TGA Engine. It was especially interesting to work with player input, movement systems and gameplay feedback."
-                        data-sv="Att arbeta med Beak Noir var en värdefull erfarenhet där jag lärde mig utveckla gameplay-system i en teamproduktion och i TGA Engine. Särskilt intressant var arbetet med spelarinput, rörelsesystem och gameplay-feedback.">
-
-                        Working on Beak Noir helped me gain experience building gameplay systems in the TGA Engine and
-                        working within a team production environment.
-
-                    </p>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer>
-
-        <div class="container" data-en="© 2026 Camilo Chavez Torres" data-sv="© 2026 Camilo Chavez Torres">
-
-            © 2026 Camilo Chavez Torres
-
+            <p>
+                Working on enemy behaviour in a combat-heavy game highlighted the importance of timing, readability and structure.
+                Even small design decisions in behaviour logic had a direct impact on how the game felt to play.
+            </p>
         </div>
 
-    </footer>
-    <script src="../script.js"></script>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <div class="container">
+        © 2026 Camilo Chavez Torres
+    </div>
+</footer>
+
+<script src="../script.js"></script>
+
 </body>
-
 </html>
