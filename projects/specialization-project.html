@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Spite - Ashes of Ephtael — Camilo Chavez Torres</title>
+
+    <link rel="icon" type="image/png" sizes="16x16" href="../media/images/favicon/favicon16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../media/images/favicon/favicon32.png">
+
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+
+<header class="nav">
+    <div class="container nav-inner">
+
+        <div class="brand">Camilo Chavez Torres</div>
+
+        <nav class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="../index.html#projects">Projects</a>
+            <a href="../index.html#about">About</a>
+            <a href="../index.html#contact">Contact</a>
+        </nav>
+
+        <div class="top-controls">
+            <button class="control-button" id="theme-toggle">🌙 Light</button>
+            <button class="control-button" id="language-toggle">SV</button>
+        </div>
+
+    </div>
+</header>
+
+<main>
+    <section>
+    <div class="container">
+
+        <h2 class="section-title">Gameplay</h2>
+
+        <div class="video-wrapper">
+            <iframe 
+                src="https://www.youtube.com/embed/XlcdTi2Ujp4"
+                title="Spite Gameplay"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+    </div>
+</section>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="container hero-grid">
+
+        <div>
+            <div class="eyebrow">
+                Team Project • Custom Engine (Lamp Engine)
+            </div>
+
+            <h1>Spite - Ashes of Ephtael</h1>
+
+            <p>
+                Spite is a Diablo-inspired action RPG developed in a team environment using our in-house engine, Lamp Engine.
+                The project focused on combat readability, enemy behaviour and responsive top-down gameplay.
+            </p>
+
+            <div class="hero-actions">
+                <a class="button button-primary" href="../index.html#projects">
+                    Back to Projects
+                </a>
+            </div>
+        </div>
+
+        <aside class="hero-card">
+            <h2>My Contribution</h2>
+
+            <ul class="hero-list">
+                <li>Enemy AI and behaviour implementation</li>
+                <li>Ranged enemy archetype (projectile-based attacks)</li>
+                <li>State machine design for enemy logic</li>
+                <li>Enemy animation integration</li>
+                <li>CameraManager and InputManager systems</li>
+            </ul>
+        </aside>
+
+    </div>
+</section>
+
+
+<!-- OVERVIEW -->
+<section>
+    <div class="container">
+
+        <h2 class="section-title">Overview</h2>
+
+        <div class="about-card">
+            <p>
+                Spite was built around fast-paced combat inspired by Diablo-style gameplay.
+                A key focus was making enemy behaviour readable and responsive, ensuring the player could understand and react to threats during combat.
+            </p>
+
+            <p>
+                My work was primarily focused on enemy systems, where I designed and implemented behaviour for a ranged enemy type that pressures the player from a distance using projectile attacks.
+                This required structuring behaviour logic, integrating animation and ensuring the enemy fit naturally into the combat flow.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- SYSTEMS -->
+<section>
+    <div class="container">
+
+        <h2 class="section-title">Systems & Features</h2>
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+                <h3>Enemy AI & State Machine</h3>
+                <p>
+                    Enemy behaviour was implemented using a state machine to clearly define transitions between states such as idle, chase and attack.
+                    This approach made behaviour predictable, extendable and easier to debug within the combat system.
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Ranged Enemy Behaviour</h3>
+                <p>
+                    I developed a ranged enemy archetype that attacks the player using projectile-based mechanics.
+                    The goal was to create pressure at a distance while maintaining clear and readable attack patterns.
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Animation Integration</h3>
+                <p>
+                    Integrated enemy animations with gameplay logic to ensure actions such as attacks and movement aligned visually with behaviour states.
+                    This was important for readability and player feedback.
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Camera & Input Systems</h3>
+                <p>
+                    Contributed to systems such as CameraManager and InputManager, helping ensure responsive controls and consistent camera behaviour during gameplay.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- TECH TAKEAWAYS -->
+<section>
+    <div class="container">
+
+        <h2 class="section-title">Technical Takeaways</h2>
+
+        <div class="about-card">
+            <p>
+                This project gave me practical experience working inside a custom engine and building gameplay systems from the ground up.
+                I gained a deeper understanding of how AI, animation and input systems interact to create a cohesive gameplay experience.
+            </p>
+
+            <p>
+                Working on enemy behaviour in a combat-heavy game highlighted the importance of timing, readability and structure.
+                Even small design decisions in behaviour logic had a direct impact on how the game felt to play.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <div class="container">
+        © 2026 Camilo Chavez Torres
+    </div>
+</footer>
+
+<script src="../script.js"></script>
+
+</body>
+</html>
