@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Spite - Ashes of Ephtael — Camilo Chavez Torres</title>
+    <title>City Simulation — Camilo Chavez Torres</title>
 
     <link rel="icon" type="image/png" sizes="16x16" href="../media/images/favicon/favicon16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../media/images/favicon/favicon32.png">
@@ -36,22 +36,6 @@
 </header>
 
 <main>
-    <section>
-    <div class="container">
-
-        <h2 class="section-title">Gameplay</h2>
-
-        <div class="video-wrapper">
-            <iframe 
-                src="https://www.youtube.com/embed/XlcdTi2Ujp4"
-                title="Spite Gameplay"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-            </iframe>
-        </div>
-
-    </div>
-</section>
 
 <!-- HERO -->
 <section class="hero">
@@ -59,14 +43,14 @@
 
         <div>
             <div class="eyebrow">
-                Team Project • Custom Engine (Lamp Engine)
+                Solo Project • Custom Engine (TGE)
             </div>
 
-            <h1>Spite - Ashes of Ephtael</h1>
+            <h1>City Simulation System</h1>
 
             <p>
-                Spite is a Diablo-inspired action RPG developed in a team environment using our in-house engine, Lamp Engine.
-                The project focused on combat readability, enemy behaviour and responsive top-down gameplay.
+                This project is a systemic city simulation focused on autonomous NPC behaviour driven by needs, schedules and world interaction.
+                The goal was to build a believable simulation where characters make decisions, move through the world and interact with dynamic points of interest.
             </p>
 
             <div class="hero-actions">
@@ -77,20 +61,20 @@
         </div>
 
         <aside class="hero-card">
-            <h2>My Contribution</h2>
+            <h2>Uses</h2>
 
             <ul class="hero-list">
-                <li>Enemy AI and behaviour implementation</li>
-                <li>Ranged enemy archetype (projectile-based attacks)</li>
-                <li>State machine design for enemy logic</li>
-                <li>Enemy animation integration</li>
-                <li>CameraManager and InputManager systems</li>
+                <li>AI decision system (Brain + Actions)</li>
+                <li>Needs system (hunger, energy)</li>
+                <li>Schedule system (day/night behaviour)</li>
+                <li>POI system (homes, work, restaurants, parks)</li>
+                <li>Steering-based movement (arrive + separation)</li>
+                <li>Grid-based world interaction</li>
             </ul>
         </aside>
 
     </div>
 </section>
-
 
 <!-- OVERVIEW -->
 <section>
@@ -100,19 +84,18 @@
 
         <div class="about-card">
             <p>
-                Spite was built around fast-paced combat inspired by Diablo-style gameplay.
-                A key focus was making enemy behaviour readable and responsive, ensuring the player could understand and react to threats during combat.
+                The project simulates a small living world where NPCs act autonomously based on internal needs and external conditions.
+                Each character continuously evaluates its hunger, energy and the current time of day to decide what action to perform.
             </p>
 
             <p>
-                My work was primarily focused on enemy systems, where I designed and implemented behaviour for a ranged enemy type that pressures the player from a distance using projectile attacks.
-                This required structuring behaviour logic, integrating animation and ensuring the enemy fit naturally into the combat flow.
+                The system is built around a bla bla decision-making, movement and behaviour execution are separated.
+                This allows for clear control flow and makes it easy to expand the simulation with new behaviours and systems.
             </p>
         </div>
 
     </div>
 </section>
-
 
 <!-- SYSTEMS -->
 <section>
@@ -123,33 +106,50 @@
         <div class="skills-grid">
 
             <div class="skill-card">
-                <h3>Enemy AI & State Machine</h3>
+                <h3>AI Decision System</h3>
                 <p>
-                    Enemy behaviour was implemented using a state machine to clearly define transitions between states such as idle, chase and attack.
-                    This approach made behaviour predictable, extendable and easier to debug within the combat system.
+                    Each NPC uses a Brain system that selects actions based on needs and schedule.
+                    Needs (hunger, energy) take priority, while a global clock defines daily routines such as work, leisure and sleep.
                 </p>
             </div>
 
             <div class="skill-card">
-                <h3>Ranged Enemy Behaviour</h3>
+                <h3>Action-Based Behaviour</h3>
                 <p>
-                    I developed a ranged enemy archetype that attacks the player using projectile-based mechanics.
-                    The goal was to create pressure at a distance while maintaining clear and readable attack patterns.
+                    Behaviour is implemented through modular Action classes such as Eat, Sleep, Work and Relax.
+                    Each action handles movement, state transitions and execution over time, creating consistent and extensible behaviour patterns.
                 </p>
             </div>
 
             <div class="skill-card">
-                <h3>Animation Integration</h3>
+                <h3>Needs System</h3>
                 <p>
-                    Integrated enemy animations with gameplay logic to ensure actions such as attacks and movement aligned visually with behaviour states.
-                    This was important for readability and player feedback.
+                    NPCs have dynamic needs that change over time.
+                    Hunger and energy drive decision-making and ensure that characters behave in a believable and reactive way.
                 </p>
             </div>
 
             <div class="skill-card">
-                <h3>Camera & Input Systems</h3>
+                <h3>POI (Point of Interest) System</h3>
                 <p>
-                    Contributed to systems such as CameraManager and InputManager, helping ensure responsive controls and consistent camera behaviour during gameplay.
+                    The world contains different POIs such as homes, workplaces, restaurants and parks.
+                    NPCs interact with these locations to fulfill their needs and perform tasks like working, eating or resting.
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Resource-Based Work System</h3>
+                <p>
+                    Work locations contain resources that are gradually depleted as NPCs perform tasks.
+                    When resources run out, locations are reset or moved, creating a dynamic and evolving simulation.
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Movement & Grid System</h3>
+                <p>
+                    NPC movement is based on steering behaviours combined with a grid system.
+                    The grid ensures stable positioning and interaction with the world, while steering provides smooth and natural movement.
                 </p>
             </div>
 
@@ -158,8 +158,58 @@
     </div>
 </section>
 
+<section>
+      <div class="container">
+        <h2 class="section-title">Feature Highlights</h2>
 
-<!-- TECH TAKEAWAYS -->
+        <div class="projects-grid">
+
+          <div class="project-card">
+            <div class="project-media">
+              <video controls>
+                <source src="../media/videos/crimson-keep/hud.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">HUD</h3>
+              <p class="project-desc">
+                HUD system showing player health and ammo feedback during combat.
+              </p>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-media">
+              <video controls>
+                <source src="../media/videos/crimson-keep/collectables.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Collectables</h3>
+              <p class="project-desc">
+                Collectables interacting with the player and triggering gameplay feedback.
+              </p>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-media">
+              <video controls>
+                <source src="../media/videos/crimson-keep/destroyable-tiles.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Destroyable Tiles</h3>
+              <p class="project-desc">
+                Environment tiles reacting to player attacks and changing the level layout.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
 <section>
     <div class="container">
 
@@ -167,13 +217,12 @@
 
         <div class="about-card">
             <p>
-                This project gave me practical experience working inside a custom engine and building gameplay systems from the ground up.
-                I gained a deeper understanding of how AI, animation and input systems interact to create a cohesive gameplay experience.
+                This project strengthened my understanding of bla bla bla.
             </p>
 
             <p>
-                Working on enemy behaviour in a combat-heavy game highlighted the importance of timing, readability and structure.
-                Even small design decisions in behaviour logic had a direct impact on how the game felt to play.
+                I also learned the importance of update order and state management and yadi yada.
+                Small changes in thresholds or update logic can significantly impact how believable the behaviour feels.
             </p>
         </div>
 
