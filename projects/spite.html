@@ -4,244 +4,188 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Spite - Ashes of Ephtael — Camilo Chavez Torres</title>
 
     <link rel="icon" type="image/png" sizes="16x16" href="../media/images/favicon/favicon16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../media/images/favicon/favicon32.png">
-
     <link rel="stylesheet" href="../styles.css">
 </head>
 
 <body>
 
-<header class="nav">
-    <div class="container nav-inner">
+    <header class="nav">
+        <div class="container nav-inner">
+            <a href="../index.html#" class="brand">Camilo Chavez Torres</a>
 
-        <div class="brand">Camilo Chavez Torres</div>
+            <nav class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="../index.html#projects">Projects</a>
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#contact">Contact</a>
+            </nav>
 
-        <nav class="nav-links">
-            <a href="../index.html">Home</a>
-            <a href="../index.html#projects">Projects</a>
-            <a href="../index.html#about">About</a>
-            <a href="../index.html#contact">Contact</a>
-        </nav>
-
-        <div class="top-controls">
-            <button class="control-button" id="theme-toggle">🌙 Light</button>
-            <button class="control-button" id="language-toggle">SV</button>
-        </div>
-
-    </div>
-</header>
-
-<main>
-    <section>
-    <div class="container">
-
-        <h2 class="section-title">Gameplay</h2>
-
-        <div class="video-wrapper">
-            <iframe 
-                src="https://www.youtube.com/embed/XlcdTi2Ujp4"
-                title="Spite Gameplay"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-            </iframe>
-        </div>
-
-    </div>
-</section>
-
-<!-- HERO -->
-<section class="hero">
-    <div class="container hero-grid">
-
-        <div>
-            <div class="eyebrow">
-                Team Project • Custom Engine (Lamp Engine)
-            </div>
-
-            <h1>Spite - Ashes of Ephtael</h1>
-
-            <p>
-                Spite is a Diablo-inspired action RPG developed in a team environment using our in-house engine, Lamp Engine.
-                The project focused on combat readability, enemy behaviour and responsive top-down gameplay.
-            </p>
-
-            <div class="hero-actions">
-                <a class="button button-primary" href="../index.html#projects">
-                    Back to Projects
-                </a>
+            <div class="top-controls">
+                <button class="control-button" id="theme-toggle">🌙 Light</button>
+                <button class="control-button" id="language-toggle">SV</button>
             </div>
         </div>
+    </header>
 
-        <aside class="hero-card">
-            <h2>My Contribution</h2>
+    <main class="spec-page">
 
-            <ul class="hero-list">
-                <li>Enemy AI and behaviour implementation</li>
-                <li>Ranged enemy archetype (projectile-based attacks)</li>
-                <li>State machine design for enemy logic</li>
-                <li>Enemy animation integration</li>
-                <li>CameraManager and InputManager systems</li>
-            </ul>
-        </aside>
+        <!-- HERO -->
+        <section class="spec-hero">
+            <div class="container">
 
-    </div>
-</section>
-
-
-<!-- OVERVIEW -->
-<section>
-    <div class="container">
-
-        <h2 class="section-title">Overview</h2>
-
-        <div class="about-card">
-            <p>
-                Spite was built around fast-paced combat inspired by Diablo-style gameplay.
-                A key focus was making enemy behaviour readable and responsive, ensuring the player could understand and react to threats during combat.
-            </p>
-
-            <p>
-                My work was primarily focused on enemy systems, where I designed and implemented behaviour for a ranged enemy type that pressures the player from a distance using projectile attacks.
-                This required structuring behaviour logic, integrating animation and ensuring the enemy fit naturally into the combat flow.
-            </p>
-        </div>
-
-    </div>
-</section>
-
-
-<!-- SYSTEMS -->
-<section>
-    <div class="container">
-
-        <h2 class="section-title">Systems & Features</h2>
-
-        <div class="skills-grid">
-
-            <div class="skill-card">
-                <h3>Enemy AI & State Machine</h3>
-                <p>
-                    Enemy behaviour was implemented using a state machine to clearly define transitions between states such as idle, chase and attack.
-                    This approach made behaviour predictable, extendable and easier to debug within the combat system.
+                <p class="spec-kicker">
+                    Team Project • Lamp Engine
                 </p>
-            </div>
 
-            <div class="skill-card">
-                <h3>Ranged Enemy Behaviour</h3>
-                <p>
-                    I developed a ranged enemy archetype that attacks the player using projectile-based mechanics.
-                    The goal was to create pressure at a distance while maintaining clear and readable attack patterns.
+                <h1 class="spec-title">
+                    Spite - Ashes of Ephtael
+                </h1>
+
+                <p class="spec-subtitle">
+                    A Diablo-inspired action RPG developed in a team using our in-house engine.
+                    My work focused on enemy AI, behaviour systems, and integrating gameplay with animation and input.
                 </p>
-            </div>
 
-            <div class="skill-card">
-                <h3>Animation Integration</h3>
-                <p>
-                    Integrated enemy animations with gameplay logic to ensure actions such as attacks and movement aligned visually with behaviour states.
-                    This was important for readability and player feedback.
-                </p>
-            </div>
+                <!-- MAIN VIDEO -->
+                <div class="spec-main-media">
+                    <video class="spec-media-item active" controls>
+                        <source src="../media/videos/spite/showcase.mp4" type="video/mp4">
+                    </video>
+                </div>
 
-            <div class="skill-card">
-                <h3>Camera & Input Systems</h3>
-                <p>
-                    Contributed to systems such as CameraManager and InputManager, helping ensure responsive controls and consistent camera behaviour during gameplay.
-                </p>
-            </div>
+                <!-- INFO STRIP -->
+                <div class="spec-info-strip">
+                    <div class="spec-info-item">
+                        <span>Role</span>
+                        <p>Gameplay / AI Programmer</p>
+                    </div>
 
+                    <div class="spec-info-item">
+                        <span>Project Type</span>
+                        <p>Team Project</p>
+                    </div>
+
+                    <div class="spec-info-item">
+                        <span>Focus</span>
+                        <p>Enemy AI, State Machines, Combat Behaviour</p>
+                    </div>
+
+                    <div class="spec-info-item">
+                        <span>Engine</span>
+                        <p>Lamp Engine (Custom)</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- WHAT I DID -->
+        <section class="spec-content">
+            <div class="container spec-content-width">
+
+                <section class="spec-section">
+                    <h2>What I Worked On</h2>
+                    <p>
+                        My main contribution was enemy behaviour and AI systems. I designed and implemented a ranged
+                        enemy
+                        archetype using a state machine, integrated animation with gameplay logic, and contributed to
+                        camera and input systems.
+                    </p>
+                </section>
+
+                <!-- FEATURE 1 -->
+                <section class="spec-section spec-feature-row">
+                    <div class="spec-feature-text">
+                        <h2>Enemy AI & State Machine</h2>
+                        <p>
+                            Enemy behaviour was structured using a state machine with clear transitions between idle,
+                            chase and attack states. This made behaviour predictable, extendable and easier to debug.
+                        </p>
+                    </div>
+
+                    <div class="spec-feature-media">
+                        <img src="../media/images/projects/spite/ai.gif" alt="Enemy AI GIF">
+                    </div>
+                </section>
+
+                <!-- FEATURE 2 -->
+                <section class="spec-section spec-feature-row">
+                    <div class="spec-feature-text">
+                        <h2>Ranged Enemy Behaviour</h2>
+                        <p>
+                            I created a ranged enemy that attacks using projectiles. The goal was to create pressure at
+                            a
+                            distance while maintaining readable attack patterns.
+                        </p>
+                    </div>
+
+                    <div class="spec-feature-media">
+                        <img src="../media/images/projects/spite/ranged.gif" alt="Ranged enemy GIF">
+                    </div>
+                </section>
+
+                <!-- FEATURE 3 -->
+                <section class="spec-section spec-feature-row">
+                    <div class="spec-feature-text">
+                        <h2>Animation Integration</h2>
+                        <p>
+                            I integrated animation with gameplay logic to ensure that attacks and movement matched the
+                            enemy behaviour states. This improved readability and feedback during combat.
+                        </p>
+                    </div>
+
+                    <div class="spec-feature-media">
+                        <img src="../media/images/projects/spite/animation.gif" alt="Animation integration GIF">
+                    </div>
+                </section>
+
+                <!-- FEATURE 4 -->
+                <section class="spec-section spec-feature-row">
+                    <div class="spec-feature-text">
+                        <h2>Camera & Input Systems</h2>
+                        <p>
+                            I contributed to CameraManager and InputManager to ensure responsive controls and stable
+                            camera
+                            behaviour during gameplay.
+                        </p>
+                    </div>
+
+                    <div class="spec-feature-media">
+                        <img src="../media/images/projects/spite/input.gif" alt="Input system GIF">
+                    </div>
+                </section>
+
+                <!-- TAKEAWAYS -->
+                <section class="spec-section">
+                    <h2>Technical Takeaways</h2>
+                    <p>
+                        This project gave me hands-on experience building gameplay systems inside a custom engine and
+                        working with AI, animation, and input together.
+                    </p>
+                    <p>
+                        It highlighted how important timing and readability are in combat-heavy games, and how even
+                        small
+                        changes in behaviour logic can significantly affect the player experience.
+                    </p>
+                </section>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            © 2026 Camilo Chavez Torres
         </div>
+    </footer>
 
-    </div>
-</section>
-
-<section>
-      <div class="container">
-        <h2 class="section-title">Feature Highlights</h2>
-
-        <div class="projects-grid">
-
-          <div class="project-card">
-            <div class="project-media">
-              <video controls>
-                <source src="../media/videos/crimson-keep/hud.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">HUD</h3>
-              <p class="project-desc">
-                HUD system showing player health and ammo feedback during combat.
-              </p>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-media">
-              <video controls>
-                <source src="../media/videos/crimson-keep/collectables.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">Collectables</h3>
-              <p class="project-desc">
-                Collectables interacting with the player and triggering gameplay feedback.
-              </p>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-media">
-              <video controls>
-                <source src="../media/videos/crimson-keep/destroyable-tiles.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">Destroyable Tiles</h3>
-              <p class="project-desc">
-                Environment tiles reacting to player attacks and changing the level layout.
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    
-
-
-<section>
-    <div class="container">
-
-        <h2 class="section-title">Technical Takeaways</h2>
-
-        <div class="about-card">
-            <p>
-                This project gave me practical experience working inside a custom engine and building gameplay systems from the ground up.
-                I gained a deeper understanding of how AI, animation and input systems interact to create a cohesive gameplay experience.
-            </p>
-
-            <p>
-                Working on enemy behaviour in a combat-heavy game highlighted the importance of timing, readability and structure.
-                Even small design decisions in behaviour logic had a direct impact on how the game felt to play.
-            </p>
-        </div>
-
-    </div>
-</section>
-
-</main>
-
-<footer>
-    <div class="container">
-        © 2026 Camilo Chavez Torres
-    </div>
-</footer>
-
-<script src="../script.js"></script>
+    <script src="../script.js"></script>
 
 </body>
+
 </html>

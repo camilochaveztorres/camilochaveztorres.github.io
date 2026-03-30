@@ -1,26 +1,20 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Beak Noir — Camilo Chavez Torres</title>
+    <title>Maruk - Shipwrecked — Camilo Chavez Torres</title>
 
     <link rel="icon" type="image/png" sizes="16x16" href="../media/images/favicon/favicon16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../media/images/favicon/favicon32.png">
-
     <link rel="stylesheet" href="../styles.css">
-
 </head>
 
 <body>
-
     <header class="nav">
         <div class="container nav-inner">
-
-            <div class="brand">Camilo Chavez Torres</div>
+            <a href="../index.html#" class="brand">Camilo Chavez Torres</a>
 
             <nav class="nav-links">
                 <a href="../index.html">Home</a>
@@ -30,204 +24,145 @@
             </nav>
 
             <div class="top-controls">
-                <button class="control-button" id="theme-toggle">🌙 Light</button>
-                <button class="control-button" id="language-toggle">SV</button>
+                <button class="control-button" id="theme-toggle" type="button">🌙 Light</button>
+                <button class="control-button" id="language-toggle" type="button">SV</button>
             </div>
-
         </div>
     </header>
 
+    <main class="spec-page">
+        <section class="spec-hero">
+            <div class="container">
+                <p class="spec-kicker" data-en="Team Project • The Game Assembly"
+                    data-sv="Teamprojekt • The Game Assembly">
+                    Team Project • The Game Assembly
+                </p>
 
+                <h1 class="spec-title" data-en="Maruk - Shipwrecked" data-sv="Maruk - Shipwrecked">
+                    Maruk - Shipwrecked
+                </h1>
 
-    <main>
-        <section class="hero">
-            <div class="container hero-grid">
-                <div>
-                    <div class="eyebrow" data-en="Team Project • The Game Assembly"
-                        data-sv="Teamprojekt • The Game Assembly">
+                <p class="spec-subtitle"
+                    data-en="A third-person platformer developed in a team environment at The Game Assembly. My work focused on companion AI, behavior tree logic, and animation integration for the companion character."
+                    data-sv="Ett tredjepersons plattformsspel utvecklat i grupp på The Game Assembly. Mitt arbete fokuserade på companion-AI, behavior tree-logik och animationsintegration för companion-karaktären.">
+                    A third-person platformer developed in a team environment at The Game Assembly. My work focused on
+                    companion AI, behavior tree logic, and animation integration for the companion character.
+                </p>
 
-                        Team Project • The Game Assembly
+                <div class="spec-main-media maruk-showcase">
+                    <video class="spec-media-item active" controls>
+                        <source src="../media/videos/maruk/showcase.mp4" type="video/mp4">
+                    </video>
+                </div>
 
+                <div class="spec-info-strip">
+                    <div class="spec-info-item">
+                        <span data-en="Role" data-sv="Roll">Role</span>
+                        <p data-en="Gameplay / AI Programmer" data-sv="Gameplay- / AI-programmerare">
+                            Gameplay / AI Programmer
+                        </p>
                     </div>
-                    <h1 data-en="Maruk - Shipwrecked" data-sv="Maruk - Shipwrecked">
 
-                        Maruk - Shipwrecked
+                    <div class="spec-info-item">
+                        <span data-en="Project Type" data-sv="Projekttyp">Project Type</span>
+                        <p data-en="Team Project" data-sv="Grupprojekt">Team Project</p>
+                    </div>
 
-                    </h1>
-                    <p data-en="Beak Noir is a top-down action shooter developed in a team production environment at The Game Assembly. The game focuses on fast-paced combat, player mobility and situational awareness in a dark stylized world."
-                        data-sv="Beak Noir är ett top-down actionspel utvecklat i grupp på The Game Assembly. Spelet fokuserar på snabb strid, rörlighet och situationsmedvetenhet i en mörk stiliserad värld.">
+                    <div class="spec-info-item">
+                        <span data-en="Focus" data-sv="Fokus">Focus</span>
+                        <p data-en="Companion AI, Behavior Trees, Animation"
+                            data-sv="Companion-AI, behavior trees, animation">
+                            Companion AI, Behavior Trees, Animation
+                        </p>
+                    </div>
 
-                        Maruk - Shipwrecked is a third person platformer and yadi dadi da.
+                    <div class="spec-info-item">
+                        <span data-en="Engine" data-sv="Motor">Engine</span>
+                        <p data-en="TGA Engine / C++" data-sv="TGA Engine / C++">TGA Engine / C++</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <section class="spec-content">
+            <div class="container spec-content-width">
+                <section class="spec-section">
+                    <h2 data-en="What I Worked On" data-sv="Det jag arbetade med">What I Worked On</h2>
+                    <p data-en="My main contribution was the companion character. I worked on behavior tree-based logic, animation integration, and gameplay-related behavior for how the companion follows, reacts, and supports the player."
+                        data-sv="Mitt huvudsakliga bidrag var companion-karaktären. Jag arbetade med behavior tree-baserad logik, animationsintegration och gameplayrelaterat beteende för hur companion följer, reagerar på och stöttar spelaren.">
+                        My main contribution was the companion character. I worked on behavior tree-based logic,
+                        animation integration, and gameplay-related behavior for how the companion follows, reacts, and
+                        supports the player.
                     </p>
+                </section>
 
-                    <div class="hero-actions">
-
-                        <a class="button button-primary" href="../index.html#projects" data-en="Back to Projects"
-                            data-sv="Tillbaka till projekt">
-
-                            Back to Projects
-
-                        </a>
-                    </div>
-                </div>
-                <aside class="hero-card">
-
-                    <h2 data-en="My role" data-sv="Min roll">My role</h2>
-
-                    <ul class="hero-list">
-
-                        <li data-en="Companion AI" data-sv="Medföljare AI">
-                            Companion AI
-                        </li>
-
-                        <li data-en="Companion animation implementation" data-sv="Medföljare animationsimplentation">
-                            Companion animation implementation
-                        </li>
-
-                    </ul>
-
-                </aside>
-
-            </div>
-
-        </section>
-        <section>
-            <div class="container">
-
-                <h2 class="section-title" data-en="Trailer - Coming Soon" data-sv="Trailer - Kommer snart">
-
-                    Trailer - Coming Soon
-
-                </h2>
-
-
-                <!-- <div class="video-container">
-
-                    <iframe width="100%" height="500" src="https://www.youtube.com/embed/gxaEJ56esTE"
-                        title="Beak Noir Trailer" frameborder="0" allowfullscreen>
-
-                    </iframe>
-
-                </div> -->
-
-            </div>
-
-        </section>
-        <section>
-
-            <div class="container">
-
-                <h2 class="section-title" data-en="Feature Highlights" data-sv="Gameplayhöjdpunkter">
-
-                    Feature Highlights
-
-                </h2>
-
-
-                <div class="skills-grid">
-
-
-                    <div class="skill-card">
-
-                        <h3 data-en="Companion does stuff based on behaviour tree" data-sv="Companion does stuff based on behaviour tree">
-                            Companion does stuff based on behaviour tree
-                        </h3>
-
-                        <p data-en="Companion does stuff based on behaviour tree"
-                            data-sv="Jag arbetade med spelarrörelse inklusive dash-mekanik. Rörelse var en central del av gameplay och behövde kännas responsiv under strid.">
-
-                            I worked on player movement including dash mechanics and responsiveness.
-
+                <section class="spec-section spec-feature-row">
+                    <div class="spec-feature-text">
+                        <h2 data-en="Companion AI" data-sv="Companion-AI">Companion AI</h2>
+                        <p data-en="I implemented companion behavior so the character could follow the player and react to the game world in a believable way. The goal was to make the companion feel helpful and alive rather than just attached to the player."
+                            data-sv="Jag implementerade companion-beteende så att karaktären kunde följa spelaren och reagera på spelvärlden på ett trovärdigt sätt. Målet var att få companion att kännas hjälpsam och levande snarare än bara fastklistrad vid spelaren.">
+                            I implemented companion behavior so the character could follow the player and react to the
+                            game world in a believable way. The goal was to make the companion feel helpful and alive
+                            rather than just attached to the player.
                         </p>
-                        <!-- VIDEO PLACEHOLDER -->
-
-                        <div class="video-container">
-
-                            <iframe width="100%" height="315" src="" title="Dash System Gameplay" frameborder="0"
-                                allowfullscreen>
-
-                            </iframe>
-
-                        </div>
-
                     </div>
-                    <div class="skill-card">
 
-                        <h3 data-en="HUD, Health & Ammo Systems" data-sv="HUD, hälsa & ammunition">
-                            HUD, Health & Ammo Systems
-                        </h3>
+                    <div class="spec-feature-media">
+                        <img src="../media/images/projects/maruk/companion-ai.gif" alt="Companion AI GIF">
+                    </div>
+                </section>
 
-                        <p data-en="I worked on the HUD and systems that handle player health and ammunition. The goal was to communicate important gameplay information clearly during combat."
-                            data-sv="Jag arbetade med HUD:en samt systemen för spelarens hälsa och ammunition. Målet var att tydligt kommunicera viktig gameplay-information under strid.">
-
-                            I worked on the HUD and gameplay systems for health and ammo.
-
+                <section class="spec-section spec-feature-row">
+                    <div class="spec-feature-text">
+                        <h2 data-en="Behavior Trees" data-sv="Behavior Trees">Behavior Trees</h2>
+                        <p data-en="The companion logic was structured using behavior trees. This made it easier to define and organize decision-making, transitions, and prioritization between different actions."
+                            data-sv="Companion-logiken strukturerades med behavior trees. Det gjorde det enklare att definiera och organisera beslutsfattande, övergångar och prioriteringar mellan olika handlingar.">
+                            The companion logic was structured using behavior trees. This made it easier to define and
+                            organize decision-making, transitions, and prioritization between different actions.
                         </p>
-                        <!-- VIDEO PLACEHOLDER -->
-
-                        <div class="video-container">
-
-                            <iframe width="100%" height="315" src="" title="HUD Gameplay" frameborder="0"
-                                allowfullscreen>
-
-                            </iframe>
-
-                        </div>
-
                     </div>
-                    <div class="skill-card">
 
-                        <h3 data-en="Controller Support" data-sv="Handkontroll">
-                            Controller Support
-                        </h3>
+                    <div class="spec-feature-media">
+                        <img src="../media/images/projects/maruk/behavior-tree.gif" alt="Behavior tree GIF">
+                    </div>
+                </section>
 
-                        <p data-en="I implemented Xbox controller support so the game can be fully played with a gamepad."
-                            data-sv="Jag implementerade stöd för Xbox-kontroller så att spelet kan spelas med handkontroll.">
-
-                            I implemented Xbox controller support.
-
+                <section class="spec-section spec-feature-row">
+                    <div class="spec-feature-text">
+                        <h2 data-en="Animation Integration" data-sv="Animationsintegration">Animation Integration</h2>
+                        <p data-en="I integrated animations for the companion so that movement and reactions matched the underlying behavior. This was important both for clarity and for making the companion feel more connected to the world."
+                            data-sv="Jag integrerade animationer för companion så att rörelse och reaktioner matchade det underliggande beteendet. Det var viktigt både för tydlighet och för att få companion att kännas mer förankrad i världen.">
+                            I integrated animations for the companion so that movement and reactions matched the
+                            underlying behavior. This was important both for clarity and for making the companion feel
+                            more connected to the world.
                         </p>
-
                     </div>
 
+                    <div class="spec-feature-media">
+                        <img src="../media/images/projects/maruk/animation.gif" alt="Companion animation GIF">
+                    </div>
+                </section>
 
-                </div>
-
-            </div>
-
-        </section>
-
-        <section>
-
-            <div class="container">
-
-                <h2 class="section-title" data-en="Challenges & Lessons" data-sv="Utmaningar & lärdomar">
-                    Challenges & Lessons
-                </h2>
-
-                <div class="about-card">
-
-                    <p data-en="Working on Beak Noir was a valuable experience in learning how to develop gameplay systems in a team environment and inside the TGA Engine. It was especially interesting to work with player input, movement systems and gameplay feedback."
-                        data-sv="Att arbeta med Beak Noir var en värdefull erfarenhet där jag lärde mig utveckla gameplay-system i en teamproduktion och i TGA Engine. Särskilt intressant var arbetet med spelarinput, rörelsesystem och gameplay-feedback.">
-
-                        Working on Beak Noir helped me gain experience building gameplay systems in the TGA Engine and
-                        working within a team production environment.
-
+                <section class="spec-section">
+                    <h2 data-en="Challenges & Lessons" data-sv="Utmaningar & lärdomar">Challenges & Lessons</h2>
+                    <p data-en="This project gave me practical experience building AI behavior inside a team project and connecting decision-making to animation and gameplay. It highlighted how important structure and readability are when building companion behaviors that stay understandable both technically and in-game."
+                        data-sv="Det här projektet gav mig praktisk erfarenhet av att bygga AI-beteende i ett grupprojekt och koppla beslutsfattande till animation och gameplay. Det visade hur viktigt struktur och läsbarhet är när man bygger companion-beteenden som ska vara begripliga både tekniskt och i spelet.">
+                        This project gave me practical experience building AI behavior inside a team project and
+                        connecting decision-making to animation and gameplay. It highlighted how important structure
+                        and readability are when building companion behaviors that stay understandable both technically
+                        and in-game.
                     </p>
-                </div>
+                </section>
             </div>
         </section>
     </main>
+
     <footer>
-
         <div class="container" data-en="© 2026 Camilo Chavez Torres" data-sv="© 2026 Camilo Chavez Torres">
-
             © 2026 Camilo Chavez Torres
-
         </div>
-
     </footer>
+
     <script src="../script.js"></script>
 </body>
 
