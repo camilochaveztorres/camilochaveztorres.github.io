@@ -16,3 +16,25 @@ themeToggleButton.addEventListener('click', () => {
     const nextTheme = body.classList.contains('light-theme') ? 'dark' : 'light';
     applyTheme(nextTheme);
 });
+
+const specThumbs = document.querySelectorAll('.spec-thumb');
+        const specMediaItems = document.querySelectorAll('.spec-media-item');
+
+        specThumbs.forEach((thumb) => {
+            thumb.addEventListener('click', () => {
+                const targetIndex = thumb.dataset.target;
+
+                specThumbs.forEach((button) => button.classList.remove('active'));
+
+                specMediaItems.forEach((item) => {
+                    item.classList.remove('active');
+
+                    if (item.tagName === 'VIDEO') {
+                        item.pause();
+                    }
+                });
+
+                thumb.classList.add('active');
+                document.getElementById(`spec-media-${targetIndex}`).classList.add('active');
+            });
+        });
