@@ -144,15 +144,28 @@
                             This is not a fixed sequence. It comes from their needs and from what is currently available
                             in the world.
                         </p>
+
                         <p>
-                            Hunger is the strongest need, but actors still depend on what exists in the world. Without
-                            reservation, this can lead to weird behaviour.
+                            The behaviour is also driven by a priority order. Hunger is checked first, then tiredness,
+                            then shared world tasks like building. If none of those take priority, the actor falls back
+                            to its current schedule. Carriers also have special rules, since urgent food transport can
+                            override their normal work behaviour.
                         </p>
+
                         <p>
-                            For example, multiple NPCs can decide to go to the same restaurant at the same time, even
-                            if it will run out of food before they arrive. When that happens, they cancel their action
-                            and switch to something else. If food suddenly becomes available again, they may all go back
-                            at once, which can look a bit messy.
+                            Because hunger has such a high priority, actors will try to eat as soon as possible.
+                        </p>
+
+                        <p>
+                            This can lead to situations where multiple NPCs decide to go to the same restaurant at the
+                            same time, even if it will run out of food before they arrive. When that happens, they
+                            cancel their action and switch to something else. If food suddenly becomes available again,
+                            they may all go back at once, which can look a bit messy.
+                        </p>
+
+                        <p>
+                            The reason for this is that there is no reservation system, which is something I introduced
+                            later to fix this behaviour.
                         </p>
                     </div>
 
@@ -169,24 +182,33 @@
                         <p>
                             I built the AI around a simple Brain + Action structure.
                         </p>
+
                         <p>
                             The Brain decides what an actor should do based on needs, schedule, and the current world
-                            state, while Actions handle how that behaviour is executed.
+                            state, while Actions handle the actual behaviour.
                         </p>
+
                         <p>
                             Each frame, the actor either continues its current action or switches to a new one if the
                             action has finished or should be interrupted. Some actions, like eating, sleeping,
                             building, or carrying resources, are not allowed to be interrupted once they have started.
                         </p>
+
+                        <p>
+                            Some actions also work like small state machines internally. For example, a build action can
+                            move through steps like going to a warehouse, going to the build site, and then building.
+                            That made it easier to keep each action self-contained instead of pushing all that logic
+                            into the Brain.
+                        </p>
+
                         <p>
                             The system is very simple, which made it much easier to work with. It was easy to debug,
-                            easy
-                            to understand, and easy to build on.
+                            easy to understand, and easy to build on.
                         </p>
+
                         <p>
                             One important detail was making sure certain actions were marked as non-interruptible. If I
-                            forgot to do that, newly added actions could instantly cancel themselves, which made bugs
-                            very obvious and helped me quickly understand what was going wrong.
+                            forgot to do that, newly added actions could instantly cancel themselves.
                         </p>
                         <p class="spec-code-intro">
                             At the core of the AI is a very simple update loop:
