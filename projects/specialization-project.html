@@ -42,43 +42,56 @@
                 <h1 class="spec-title">City Simulation</h1>
 
                 <p class="spec-subtitle">
-                    A systems-focused simulation project built in a custom C++ engine, centered around AI behavior,
-                    actor needs, schedules, points of interest, and world resource flow.
+                    A systems-focused simulation project built in a custom C++ engine, exploring how NPCs react to
+                    needs, schedules, scarcity, and changing world state instead of following fixed scripts.
                 </p>
 
                 <div class="spec-media-viewer">
                     <div class="spec-main-media">
-                        <video class="spec-media-item active" controls id="spec-media-0">
-                            <source src="../media/images/projects/specialization/vid.mp4" type="video/mp4">
+                        <video class="spec-media-item active" id="spec-media-0" controls autoplay muted loop
+                            playsinline>
+                            <source src="../media/videos/specialization/overview.mp4" type="video/mp4">
                         </video>
 
-                        <img class="spec-media-item" id="spec-media-1"
-                            src="../media/images/projects/specialization/spec_1.png" alt="City Simulation screenshot 1">
+                        <video class="spec-media-item" id="spec-media-1" controls muted loop playsinline>
+                            <source src="../media/videos/specialization/restaurant-overcommit.mp4" type="video/mp4">
+                        </video>
 
-                        <img class="spec-media-item" id="spec-media-2"
-                            src="../media/images/projects/specialization/spec_1.png" alt="City Simulation screenshot 2">
+                        <video class="spec-media-item" id="spec-media-2" controls muted loop playsinline>
+                            <source src="../media/videos/specialization/jobs-overview.mp4" type="video/mp4">
+                        </video>
 
-                        <img class="spec-media-item" id="spec-media-3"
-                            src="../media/images/projects/specialization/spec_1.png" alt="City Simulation screenshot 3">
+                        <video class="spec-media-item" id="spec-media-3" controls muted loop playsinline>
+                            <source src="../media/videos/specialization/build-reservation.mp4" type="video/mp4">
+                        </video>
                     </div>
 
                     <div class="spec-thumbnails">
-                        <button class="spec-thumb active" data-target="0" type="button" aria-label="Show video">
-                            <video muted playsinline>
-                                <source src="../media/images/projects/specialization/vid.mp4" type="video/mp4">
+                        <button class="spec-thumb active" data-target="0" type="button"
+                            aria-label="Show overview video">
+                            <video muted loop playsinline>
+                                <source src="../media/videos/specialization/overview.mp4" type="video/mp4">
                             </video>
                         </button>
 
-                        <button class="spec-thumb" data-target="1" type="button" aria-label="Show screenshot 1">
-                            <img src="../media/images/projects/specialization/spec_1.png" alt="Thumbnail 1">
+                        <button class="spec-thumb" data-target="1" type="button"
+                            aria-label="Show restaurant behaviour video">
+                            <video muted loop playsinline>
+                                <source src="../media/videos/specialization/restaurant-overcommit.mp4" type="video/mp4">
+                            </video>
                         </button>
 
-                        <button class="spec-thumb" data-target="2" type="button" aria-label="Show screenshot 2">
-                            <img src="../media/images/projects/specialization/thumb_2.png" alt="Thumbnail 2">
+                        <button class="spec-thumb" data-target="2" type="button" aria-label="Show jobs video">
+                            <video muted loop playsinline>
+                                <source src="../media/videos/specialization/jobs-overview.mp4" type="video/mp4">
+                            </video>
                         </button>
 
-                        <button class="spec-thumb" data-target="3" type="button" aria-label="Show screenshot 3">
-                            <img src="../media/images/projects/specialization/thumb_3.png" alt="Thumbnail 3">
+                        <button class="spec-thumb" data-target="3" type="button"
+                            aria-label="Show build reservation video">
+                            <video muted loop playsinline>
+                                <source src="../media/videos/specialization/build-reservation.mp4" type="video/mp4">
+                            </video>
                         </button>
                     </div>
                 </div>
@@ -101,7 +114,7 @@
 
                     <div class="spec-info-item">
                         <span>Tech</span>
-                        <p>C++, AI, Custom Systems, Debug Tools</p>
+                        <p>C++, AI, ImGui, Custom Systems</p>
                     </div>
                 </div>
             </div>
@@ -110,97 +123,204 @@
         <section class="spec-content">
             <div class="container spec-content-width">
                 <section class="spec-section">
-                    <h2>Motivation & Goal</h2>
+                    <h2>Overview</h2>
                     <p>
-                        My goal with this project was to build a more systemic and simulation-driven experience rather
-                        than a traditional action prototype. I wanted to explore how actors could make decisions based
-                        on needs, schedules, available points of interest, and resources in the world.
+                        The goal of this project was to create a simulation where NPCs feel alive by reacting to the
+                        world and their own needs instead of following a script.
                     </p>
                     <p>
-                        A major motivation was to practice building connected systems instead of isolated features. AI
-                        actions, homes, workplaces, restaurants, parks, resources, and carriers all needed to interact
-                        in a way that felt coherent and readable.
+                        Rather than focusing on a single mechanic, I wanted to build a small systemic world where
+                        actors move through daily routines, respond to scarcity, and change their behaviour depending on
+                        what is actually happening around them.
                     </p>
+                </section>
+
+                <section class="spec-section spec-feature-row">
+                    <div class="spec-feature-text">
+                        <h2>Simulation & Actor Behaviour</h2>
+                        <p>
+                            A typical actor moves through a simple daily loop — working, getting hungry, eating,
+                            getting tired, relaxing, and eventually going to sleep. What drives this behaviour is not a
+                            fixed sequence, but a combination of needs and what is currently available in the world.
+                        </p>
+                        <p>
+                            Hunger is the strongest need, but actors still depend on what exists in the world. Without
+                            reservation, this can lead to weird behaviour.
+                        </p>
+                        <p>
+                            For example, multiple NPCs can decide to go to the same restaurant at the same time, even
+                            if it will run out of food before they arrive. When that happens, they cancel their action
+                            and switch to something else. If food suddenly becomes available again, they may all go
+                            back at once, which can make the behaviour look unstable.
+                        </p>
+                    </div>
+
+                    <div class="spec-feature-media">
+                        <video controls autoplay muted loop playsinline>
+                            <source src="../media/videos/specialization/restaurant-overcommit.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </section>
+
+                <section class="spec-section spec-feature-row">
+                    <div class="spec-feature-text">
+                        <h2>AI Structure – Brain & Actions</h2>
+                        <p>
+                            I built the AI around a simple Brain + Action structure.
+                        </p>
+                        <p>
+                            The Brain decides what an actor should do based on needs, schedule, and the current world
+                            state, while Actions handle how that behaviour is executed.
+                        </p>
+                        <p>
+                            Each frame, the actor either continues its current action or switches to a new one if the
+                            action has finished or should be interrupted. Some actions, like eating, sleeping,
+                            building, or carrying resources, are not allowed to be interrupted once they have started.
+                        </p>
+                        <p>
+                            This setup stayed very simple, but that was also its biggest strength. It made the system
+                            easy to reason about, easy to debug, and easy to extend with new behaviours and rules.
+                        </p>
+                        <p>
+                            One important detail was making sure certain actions were marked as non-interruptible. If I
+                            forgot to do that, newly added actions could instantly cancel themselves, which made bugs
+                            very obvious and helped me quickly understand what was going wrong.
+                        </p>
+                        <p class="spec-code-intro">
+                            At the core of the AI is a very simple update loop:
+                        </p>
+                        <details class="spec-code-block">
+                            <summary>View Brain::Update pseudocode</summary>
+
+                            <div class="spec-code-inner">
+                                <div class="spec-code-file">BRAIN::UPDATE()</div>
+
+                                <pre><code>if there is no current action
+or the current action is finished
+or the current action should be interrupted
+{
+    decide next action
+    create that action
+
+    if a new action exists
+    {
+        start the action
+    }
+}
+
+if there is a current action
+{
+    update the action
+}</code></pre>
+
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="spec-feature-media">
+                        <video controls autoplay muted loop playsinline>
+                            <source src="../media/videos/specialization/jobs-overview.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </section>
+
+                <section class="spec-section spec-feature-row">
+                    <div class="spec-feature-text">
+                        <h2>From Static to Living Systems</h2>
+                        <p>
+                            One of the biggest challenges in this project was making the simulation actually feel alive.
+                        </p>
+                        <p>
+                            Early on, the behaviour looked correct on a technical level, but it felt static. Actors
+                            repeated the same patterns over and over again, there were no real consequences to their
+                            decisions, and too little changed in the world.
+                        </p>
+                        <p>
+                            The biggest improvement came from introducing finite resources.
+                        </p>
+                        <p>
+                            Once resources could run out, actors were forced to react to each other and to the world in
+                            a different way. Suddenly, behaviour became less predictable — actors could no longer rely
+                            on things always being available, which made their decisions feel more grounded.
+                        </p>
+                        <p>
+                            I also introduced food decay, partly because I thought it would be fun to implement, but
+                            also because it added another layer of scarcity. Food is no longer just available or
+                            unavailable — it changes over time. This created more variation in the simulation and added
+                            subtle pressure to the resource and transport systems.
+                        </p>
+                        <p>
+                            Together, these changes made the world feel less perfect, and in turn, more believable.
+                        </p>
+                    </div>
+
+                    <div class="spec-feature-media">
+                        <video controls autoplay muted loop playsinline>
+                            <source src="../media/videos/specialization/food-decay-carry.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </section>
+
+                <section class="spec-section spec-feature-row">
+                    <div class="spec-feature-text">
+                        <h2>Reservation & Shared World State</h2>
+                        <p>
+                            Reservation became an important part of making the simulation more stable and believable.
+                        </p>
+                        <p>
+                            Some tasks need to be claimed before the actor actually starts doing them. In my current
+                            project, this matters most for carrying resources and for build sites, where a maximum of
+                            two actors can work on the same construction at once.
+                        </p>
+                        <p>
+                            Without this, too many actors could commit to the same task, which created messy and
+                            inconsistent behaviour. Adding reservation helped reduce that problem and made task
+                            distribution feel much more intentional.
+                        </p>
+                    </div>
+
+                    <div class="spec-feature-media">
+                        <video controls autoplay muted loop playsinline>
+                            <source src="../media/videos/specialization/build-reservation.mp4" type="video/mp4">
+                        </video>
+                    </div>
                 </section>
 
                 <section class="spec-section">
-                    <h2>Result & Reflection</h2>
+                    <h2>Balancing & Iteration</h2>
                     <p>
-                        The project evolved into a city-simulation prototype where NPCs can work, rest, eat, move
-                        between locations, and react to changes in the world state. The most valuable result was not
-                        a single mechanic, but how multiple systems began supporting each other.
+                        Balancing the simulation turned out to be one of the hardest parts of the project.
                     </p>
                     <p>
-                        The biggest lesson was how important architecture becomes once many systems depend on shared
-                        world state. Refactoring POI logic and resource logic into dedicated managers made the project
-                        easier to reason about and much easier to extend.
+                        Small changes to values could completely change how the actors behaved. At different points,
+                        NPCs would eat too often, go to sleep too early, or behave in ways that didn’t feel natural in
+                        the context of the world.
                     </p>
-                </section>
-
-                <section class="spec-section spec-feature-row">
-                    <div class="spec-feature-text">
-                        <h2>AI Architecture</h2>
-                        <p>
-                            NPCs use a Brain system together with actions such as Eat, Sleep, Work, Relax, and
-                            carrying resources. Decisions are influenced by needs, daily schedules, and what is
-                            currently available in the world.
-                        </p>
-                        <p>
-                            This let me build behavior that feels systemic rather than scripted, where actors adapt
-                            based on world state instead of following fixed sequences.
-                        </p>
-                    </div>
-
-                    <div class="spec-feature-media">
-                        <img src="../media/images/projects/specialization/thumb_1.png" alt="AI architecture screenshot">
-                    </div>
-                </section>
-
-                <section class="spec-section spec-feature-row">
-                    <div class="spec-feature-text">
-                        <h2>POI & Resource Management</h2>
-                        <p>
-                            A POIManager handles homes, workplaces, restaurants, and parks, while a ResourceManager
-                            owns world resources, including spawning, reservation, delivery logic, freshness, and decay.
-                        </p>
-                        <p>
-                            Moving these responsibilities out of GameWorld was one of the most important refactors in
-                            the project and made the simulation significantly cleaner.
-                        </p>
-                    </div>
-
-                    <div class="spec-feature-media">
-                        <img src="../media/images/projects/specialization/thumb_2.png"
-                            alt="POI and resource system screenshot">
-                    </div>
-                </section>
-
-                <section class="spec-section spec-feature-row">
-                    <div class="spec-feature-text">
-                        <h2>Needs, Schedules & Simulation Flow</h2>
-                        <p>
-                            Actors are driven by needs such as hunger and energy while also following a time-of-day
-                            schedule. This creates a readable daily rhythm where NPCs move between home, work,
-                            restaurants, and leisure locations.
-                        </p>
-                        <p>
-                            A key challenge was making these systems stable and debuggable while many actors were
-                            running simultaneously and affecting the same world state.
-                        </p>
-                    </div>
-
-                    <div class="spec-feature-media">
-                        <img src="../media/images/projects/specialization/thumb_3.png"
-                            alt="Needs and schedule screenshot">
-                    </div>
+                    <p>
+                        What made this challenging was how connected everything is. Needs, schedules, available
+                        resources, and action rules all influence each other, which made it difficult to predict the
+                        outcome of even small adjustments.
+                    </p>
+                    <p>
+                        This led to a lot of iteration and constant tweaking of thresholds and values. It was sometimes
+                        frustrating, but also one of the most valuable parts of the project.
+                    </p>
+                    <p>
+                        It made me understand how sensitive simulation systems are, and how important it is to design
+                        them in a way that makes them easier to observe, debug, and adjust.
+                    </p>
                 </section>
 
                 <section class="spec-section">
                     <h2>What I’d Improve Next</h2>
                     <p>
-                        If I continued the project, I would improve pathfinding robustness, expand debugging
-                        visualization, and deepen the simulation layer so actors affect each other more directly instead
-                        of mainly reacting to resources and schedules.
+                        The next step would be to push the simulation further by adding more direct interaction between
+                        actors, improving reservation around restaurants, and making the world state create even more
+                        meaningful variation over time.
+                    </p>
+                    <p>
+                        I would also like to improve pathfinding robustness and continue expanding the debug tools,
+                        since that became a huge part of making this kind of project readable and manageable.
                     </p>
                 </section>
             </div>
