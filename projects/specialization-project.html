@@ -129,7 +129,7 @@
                         their own needs instead of following a script.
                     </p>
                     <p>
-                        Instead of focusing on one mechanic, I wanted to build a small world where actors go through
+                        Instead of focusing on one mechanic, I wanted to build a small world where NPCs go through
                         daily routines, react to scarcity, and change their behaviour based on what is actually
                         happening around them.
                     </p>
@@ -137,9 +137,9 @@
 
                 <section class="spec-section spec-feature-row">
                     <div class="spec-feature-text">
-                        <h2>Simulation & Actor Behaviour</h2>
+                        <h2>Simulation & NPC Behaviour</h2>
                         <p>
-                            A typical actor moves through a simple daily loop. They work, get hungry, eat, get tired,
+                            A typical NPC moves through a simple daily loop. They work, get hungry, eat, get tired,
                             relax, and eventually go to sleep.
                             This is not a fixed sequence. It comes from their needs and from what is currently available
                             in the world.
@@ -147,13 +147,13 @@
 
                         <p>
                             The behaviour is also driven by a priority order. Hunger is checked first, then tiredness,
-                            then shared world tasks like building. If none of those take priority, the actor falls back
+                            then shared world tasks like building. If none of those take priority, the NPC falls back
                             to its current schedule. Carriers also have special rules, since urgent food transport can
                             override their normal work behaviour.
                         </p>
 
                         <p>
-                            Because hunger has such a high priority, actors will try to eat as soon as possible.
+                            Because hunger has such a high priority, NPCs will try to eat as soon as possible.
                         </p>
 
                         <p>
@@ -184,12 +184,12 @@
                         </p>
 
                         <p>
-                            The Brain decides what an actor should do based on needs, schedule, and the current world
+                            The Brain decides what an NPC should do based on needs, schedule, and the current world
                             state, while Actions handle the actual behaviour.
                         </p>
 
                         <p>
-                            Each frame, the actor either continues its current action or switches to a new one if the
+                            Each frame, the NPC either continues its current action or switches to a new one if the
                             action has finished or should be interrupted. Some actions, like eating, sleeping,
                             building, or carrying resources, are not allowed to be interrupted once they have started.
                         </p>
@@ -255,7 +255,7 @@ if there is a current action
                             One of the biggest challenges in this project was making the simulation actually feel alive.
                         </p>
                         <p>
-                            Early on, everything technically worked, but it didn’t feel alive. Actors
+                            Early on, everything technically worked, but it didn’t feel alive. NPCs
                             repeated the same patterns over and over again, there were no real consequences to their
                             decisions, and too little changed in the world.
                         </p>
@@ -263,8 +263,8 @@ if there is a current action
                             The biggest improvement came from introducing finite resources.
                         </p>
                         <p>
-                            Once resources could run out, actors were forced to react to each other and to the world in
-                            a different way. Behaviour became less predictable because actors could no longer rely on
+                            Once resources could run out, NPCs were forced to react to each other and to the world in
+                            a different way. Behaviour became less predictable because NPCs could no longer rely on
                             things always being available. That made their decisions feel more believable.
                         </p>
                         <p>
@@ -289,16 +289,16 @@ if there is a current action
                     <div class="spec-feature-text">
                         <h2>Reservation & Shared World State</h2>
                         <p>
-                            Reservation became important once multiple actors started competing for the same things. It
+                            Reservation became important once multiple NPCs started competing for the same things. It
                             wasn’t something I planned for early on, which made it harder to introduce later.
                         </p>
                         <p>
-                            Some tasks need to be claimed before the actor actually starts doing them. In my current
+                            Some tasks need to be claimed before the NPC actually starts doing them. In my current
                             project, this matters most for carrying resources and for build sites, where a maximum of
-                            two actors can work on the same construction at once.
+                            two NPCs can work on the same construction at once.
                         </p>
                         <p>
-                            Without this, too many actors could commit to the same task, which created messy and
+                            Without this, too many NPCs could commit to the same task, which created messy and
                             inconsistent behaviour. Adding reservation helped reduce that problem and made task
                             distribution feel a lot more controlled.
                         </p>
@@ -317,7 +317,7 @@ if there is a current action
                         Balancing the simulation turned out to be one of the hardest parts of the project.
                     </p>
                     <p>
-                        Small changes to values could completely change how the actors behaved. At different points,
+                        Small changes to values could completely change how the NPCs behaved. At different points,
                         NPCs would eat too often, go to sleep too early, or behave in ways that didn’t feel natural in
                         the context of the world.
                     </p>
@@ -343,7 +343,7 @@ if there is a current action
                 <section class="spec-section">
                     <h2>What I’d Improve Next</h2>
                     <p>
-                        The next step would be to make actors affect each other more directly, improve reservation
+                        The next step would be to make NPCs affect each other more directly, improve reservation
                         around restaurants, and create even more variation in the world over time.
                     </p>
                     <p>
