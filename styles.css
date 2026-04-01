@@ -534,6 +534,16 @@ body.light-theme .spec-kicker {
   color: #060a13;
 }
 
+body.light-theme .spec-info-item {
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+body.light-theme .spec-info-item span {
+  color: #060a13 !important;
+}
+
 .spec-title {
   margin: 0 0 0.6rem;
   font-size: clamp(3rem, 8vw, 5.5rem);

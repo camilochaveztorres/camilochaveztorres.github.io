@@ -42,8 +42,8 @@
                 <h1 class="spec-title">City Simulation</h1>
 
                 <p class="spec-subtitle">
-                    A systems-focused simulation project built in a custom C++ engine (TGE), exploring how NPCs react to
-                    needs, schedules, scarcity, and changing world state instead of following fixed scripts.
+                    A city simulation project built in TGE, focused on how NPCs react to needs, schedules, scarcity, and
+                    a changing world instead of following scripted behaviour.
                 </p>
 
                 <div class="spec-media-viewer">
@@ -125,13 +125,13 @@
                 <section class="spec-section">
                     <h2>Overview</h2>
                     <p>
-                        The goal of this project was to create a simulation where NPCs feel alive by reacting to the
-                        world and their own needs instead of following a script.
+                        The goal of this project was to make NPCs feel alive by letting them react to the world and
+                        their own needs instead of following a script.
                     </p>
                     <p>
-                        Rather than focusing on a single mechanic, I wanted to build a small systemic world where
-                        actors move through daily routines, respond to scarcity, and change their behaviour depending on
-                        what is actually happening around them.
+                        Instead of focusing on one mechanic, I wanted to build a small world where actors go through
+                        daily routines, react to scarcity, and change their behaviour based on what is actually
+                        happening around them.
                     </p>
                 </section>
 
@@ -139,9 +139,10 @@
                     <div class="spec-feature-text">
                         <h2>Simulation & Actor Behaviour</h2>
                         <p>
-                            A typical actor moves through a simple daily loop — working, getting hungry, eating,
-                            getting tired, relaxing, and eventually going to sleep. What drives this behaviour is not a
-                            fixed sequence, but a combination of needs and what is currently available in the world.
+                            A typical actor moves through a simple daily loop. They work, get hungry, eat, get tired,
+                            relax, and eventually go to sleep.
+                            This is not a fixed sequence. It comes from their needs and from what is currently available
+                            in the world.
                         </p>
                         <p>
                             Hunger is the strongest need, but actors still depend on what exists in the world. Without
@@ -150,8 +151,8 @@
                         <p>
                             For example, multiple NPCs can decide to go to the same restaurant at the same time, even
                             if it will run out of food before they arrive. When that happens, they cancel their action
-                            and switch to something else. If food suddenly becomes available again, they may all go
-                            back at once, which can make the behaviour look unstable.
+                            and switch to something else. If food suddenly becomes available again, they may all go back
+                            at once, which can look a bit messy.
                         </p>
                     </div>
 
@@ -178,8 +179,9 @@
                             building, or carrying resources, are not allowed to be interrupted once they have started.
                         </p>
                         <p>
-                            This setup stayed very simple, but that was also its biggest strength. It made the system
-                            easy to reason about, easy to debug, and easy to extend with new behaviours and rules.
+                            The system is very simple, which made it much easier to work with. It was easy to debug,
+                            easy
+                            to understand, and easy to build on.
                         </p>
                         <p>
                             One important detail was making sure certain actions were marked as non-interruptible. If I
@@ -231,7 +233,7 @@ if there is a current action
                             One of the biggest challenges in this project was making the simulation actually feel alive.
                         </p>
                         <p>
-                            Early on, the behaviour looked correct on a technical level, but it felt static. Actors
+                            Early on, everything technically worked, but it didn’t feel alive. Actors
                             repeated the same patterns over and over again, there were no real consequences to their
                             decisions, and too little changed in the world.
                         </p>
@@ -240,17 +242,17 @@ if there is a current action
                         </p>
                         <p>
                             Once resources could run out, actors were forced to react to each other and to the world in
-                            a different way. Suddenly, behaviour became less predictable — actors could no longer rely
-                            on things always being available, which made their decisions feel more grounded.
+                            a different way. Behaviour became less predictable because actors could no longer rely on
+                            things always being available. That made their decisions feel more believable.
                         </p>
                         <p>
                             I also introduced food decay, partly because I thought it would be fun to implement, but
                             also because it added another layer of scarcity. Food is no longer just available or
-                            unavailable — it changes over time. This created more variation in the simulation and added
-                            subtle pressure to the resource and transport systems.
+                            unavailable. It changes over time. This created more variation in the simulation and gave
+                            the resource and transport systems more to react to.
                         </p>
                         <p>
-                            Together, these changes made the world feel less perfect, and in turn, more believable.
+                            Together, these changes made the world feel less perfect and a lot more believable.
                         </p>
                     </div>
 
@@ -265,7 +267,8 @@ if there is a current action
                     <div class="spec-feature-text">
                         <h2>Reservation & Shared World State</h2>
                         <p>
-                            Reservation became an important part of making the simulation more stable and believable.
+                            Reservation became important once multiple actors started competing for the same things. It
+                            wasn’t something I planned for early on, which made it harder to introduce later.
                         </p>
                         <p>
                             Some tasks need to be claimed before the actor actually starts doing them. In my current
@@ -275,7 +278,7 @@ if there is a current action
                         <p>
                             Without this, too many actors could commit to the same task, which created messy and
                             inconsistent behaviour. Adding reservation helped reduce that problem and made task
-                            distribution feel much more intentional.
+                            distribution feel a lot more controlled.
                         </p>
                     </div>
 
@@ -306,21 +309,24 @@ if there is a current action
                         frustrating, but also one of the most valuable parts of the project.
                     </p>
                     <p>
-                        It made me understand how sensitive simulation systems are, and how important it is to design
-                        them in a way that makes them easier to observe, debug, and adjust.
+                        It also made me realise how sensitive simulation systems are, and how important it is to make
+                        them easy to observe, debug, and tweak.
+                    </p>
+                    <p>
+                        It also showed me how important planning is. I didn’t think about reservation early on, which
+                        made it much harder to add later once other systems were already built around it.
                     </p>
                 </section>
 
                 <section class="spec-section">
                     <h2>What I’d Improve Next</h2>
                     <p>
-                        The next step would be to push the simulation further by adding more direct interaction between
-                        actors, improving reservation around restaurants, and making the world state create even more
-                        meaningful variation over time.
+                        The next step would be to make actors affect each other more directly, improve reservation
+                        around restaurants, and create even more variation in the world over time.
                     </p>
                     <p>
-                        I would also like to improve pathfinding robustness and continue expanding the debug tools,
-                        since that became a huge part of making this kind of project readable and manageable.
+                        I would also like to improve the pathfinding and keep expanding the debug tools, since they
+                        became a huge part of understanding what was actually going on.
                     </p>
                 </section>
             </div>
