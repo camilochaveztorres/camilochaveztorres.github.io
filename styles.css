@@ -1244,14 +1244,18 @@ body.light-theme .spec-job-button.active {
 @media (max-width: 900px) {
   .hero-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
   .hero-greedy {
-    justify-content: flex-start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
   }
 
   .hero-greedy video {
-    max-width: 300px;
+    max-width: 140px;
   }
 }
 
