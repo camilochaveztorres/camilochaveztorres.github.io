@@ -35,128 +35,132 @@
     </header>
 
     <main class="spec-page">
+
         <section class="spec-hero">
             <div class="container">
-                <p class="spec-kicker" data-en="Team Project • The Game Assembly"
-                    data-sv="Teamprojekt • The Game Assembly">
+
+                <p class="spec-kicker">
                     Team Project • The Game Assembly
                 </p>
 
-                <h1 class="spec-title" data-en="Beak Noir" data-sv="Beak Noir">
+                <h1 class="spec-title">
                     Beak Noir
                 </h1>
 
-                <p class="spec-subtitle"
-                    data-en="A top-down action shooter developed in a team production environment at The Game Assembly. I worked on player-facing gameplay systems including movement, dash, controller support, HUD, and health/ammo systems."
-                    data-sv="Ett top-down actionspel utvecklat i grupp på The Game Assembly. Jag arbetade med gameplaynära system som spelarrörelse, dash, handkontrollsstöd, HUD samt hälsa- och ammunitionssystem.">
-                    A top-down action shooter developed in a team production environment at The Game Assembly. I worked
-                    on player-facing gameplay systems including movement, dash, controller support, HUD, and health/ammo
+                <p class="spec-subtitle">
+                    A top-down action shooter where I worked on movement, controller support, HUD, and health/ammo
                     systems.
                 </p>
 
-                <div class="spec-main-media beak-showcase">
-                    <video class="spec-media-item active" controls>
+                <div class="spec-main-media">
+                    <video autoplay muted loop playsinline>
                         <source src="../media/videos/beak-noir/showcase.mp4" type="video/mp4">
                     </video>
                 </div>
 
                 <div class="spec-info-strip">
                     <div class="spec-info-item">
-                        <span data-en="Role" data-sv="Roll">Role</span>
-                        <p data-en="Gameplay Programmer" data-sv="Gameplay-programmerare">Gameplay Programmer</p>
+                        <span>Role</span>
+                        <p>Gameplay Programmer</p>
                     </div>
 
                     <div class="spec-info-item">
-                        <span data-en="Project Type" data-sv="Projekttyp">Project Type</span>
-                        <p data-en="Team Project" data-sv="Grupprojekt">Team Project</p>
+                        <span>Project Type</span>
+                        <p>Team Project</p>
                     </div>
 
                     <div class="spec-info-item">
-                        <span data-en="Focus" data-sv="Fokus">Focus</span>
-                        <p data-en="Player Systems, HUD, Input" data-sv="Spelarsystem, HUD, Input">
-                            Player Systems, HUD, Input
-                        </p>
+                        <span>Focus</span>
+                        <p>Movement, Controller Support, HUD</p>
                     </div>
 
                     <div class="spec-info-item">
-                        <span data-en="Engine" data-sv="Motor">Engine</span>
-                        <p data-en="TGA Engine / C++" data-sv="TGA Engine / C++">TGA Engine / C++</p>
+                        <span>Engine</span>
+                        <p>TGA Engine / C++</p>
                     </div>
                 </div>
+
             </div>
         </section>
 
         <section class="spec-content">
             <div class="container spec-content-width">
+
+                <section class="spec-section spec-feature-row">
+                    <div class="spec-feature-text">
+                        <h2>Movement & Controller Support</h2>
+                        <p>
+                            I worked on movement and controller support.
+                        </p>
+                        <p>
+                            A big part of that was making movement feel smooth with a controller.
+                        </p>
+                    </div>
+
+                    <div class="spec-feature-media">
+                        <div class="spec-job-gallery">
+
+                            <video class="spec-job-video active" id="job-video-0" autoplay muted loop playsinline>
+                                <source src="../media/videos/beak-noir/keyboard.mp4" type="video/mp4">
+                            </video>
+
+                            <video class="spec-job-video" id="job-video-1" muted loop playsinline>
+                                <source src="../media/videos/beak-noir/controller.mp4" type="video/mp4">
+                            </video>
+
+                            <div class="spec-job-gallery-controls">
+                                <button class="spec-job-button active" type="button" data-job-target="0">
+                                    Keyboard
+                                </button>
+                                <button class="spec-job-button" type="button" data-job-target="1">
+                                    Controller
+                                </button>
+                            </div>
+
+                            <p class="spec-video-caption active" data-job-caption="0">
+                                Movement with keyboard and mouse
+                            </p>
+
+                            <p class="spec-video-caption" data-job-caption="1">
+                                Movement with controller
+                            </p>
+
+                        </div>
+                    </div>
+                </section>
+
+                <section class="spec-section spec-feature-row reverse">
+                    <div class="spec-feature-text">
+                        <h2>HUD, Health & Ammo</h2>
+                        <p>
+                            Implemented HUD and connected it to health and ammo.
+                        </p>
+                        <p>
+                            Built health and ammo logic and hooked it into gameplay and UI.
+                        </p>
+                        <p>
+                            Used an event system (PostMaster) to handle communication between gameplay systems.
+                        </p>
+                    </div>
+
+                    <div class="spec-feature-media">
+                        <video autoplay muted loop playsinline>
+                            <source src="../media/videos/beak-noir/combat.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </section>
+
                 <section class="spec-section">
-                    <h2 data-en="What I Worked On" data-sv="Det jag arbetade med">What I Worked On</h2>
-                    <p data-en="My main contribution was player-facing gameplay and support systems. I worked on movement and dash, Xbox controller support, HUD implementation, and gameplay systems related to health and ammo."
-                        data-sv="Mitt huvudsakliga bidrag var gameplaynära system för spelaren. Jag arbetade med rörelse och dash, Xbox controller-stöd, HUD-implementation samt gameplay-system kopplade till hälsa och ammunition.">
-                        My main contribution was player-facing gameplay and support systems. I worked on movement and
-                        dash, Xbox controller support, HUD implementation, and gameplay systems related to health and
-                        ammo.
+                    <h2>Takeaway</h2>
+                    <p>
+                        This project gave me more experience working with movement, control feel, and gameplay systems
+                        in TGE.
                     </p>
                 </section>
 
-                <section class="spec-section spec-feature-row">
-                    <div class="spec-feature-text">
-                        <h2 data-en="Player Movement & Dash" data-sv="Spelarrörelse & dash">Player Movement & Dash</h2>
-                        <p data-en="I worked on player movement with a focus on responsiveness and feel. Dash was an important part of the game’s combat flow, so it needed to feel quick, readable, and reliable."
-                            data-sv="Jag arbetade med spelarrörelse med fokus på responsivitet och känsla. Dash var en viktig del av spelets stridsflöde och behövde därför kännas snabb, tydlig och pålitlig.">
-                            I worked on player movement with a focus on responsiveness and feel. Dash was an important
-                            part of the game’s combat flow, so it needed to feel quick, readable, and reliable.
-                        </p>
-                    </div>
-
-                    <div class="spec-feature-media">
-                        <img src="../media/images/projects/beak-noir/dash.gif" alt="Player movement and dash gif">
-                    </div>
-                </section>
-
-                <section class="spec-section spec-feature-row">
-                    <div class="spec-feature-text">
-                        <h2 data-en="HUD, Health & Ammo Systems" data-sv="HUD, hälsa & ammunition">
-                            HUD, Health & Ammo Systems
-                        </h2>
-                        <p data-en="I implemented HUD-related features and gameplay systems for player health and ammo. The goal was to make combat information easy to read without overwhelming the player."
-                            data-sv="Jag implementerade HUD-relaterade funktioner samt gameplay-system för spelarens hälsa och ammunition. Målet var att göra viktig stridsinformation lätt att läsa utan att överbelasta spelaren.">
-                            I implemented HUD-related features and gameplay systems for player health and ammo. The
-                            goal was to make combat information easy to read without overwhelming the player.
-                        </p>
-                    </div>
-
-                    <div class="spec-feature-media">
-                        <img src="../media/images/projects/beak-noir/hud.gif" alt="HUD and health ammo systems gif">
-                    </div>
-                </section>
-
-                <section class="spec-section spec-feature-row">
-                    <div class="spec-feature-text">
-                        <h2 data-en="Controller Support" data-sv="Handkontrollsstöd">Controller Support</h2>
-                        <p data-en="I added Xbox controller support so the game could be fully played with a gamepad. This was important both for accessibility and for making the game feel natural on different input devices."
-                            data-sv="Jag lade till stöd för Xbox-kontroller så att spelet kunde spelas fullt ut med handkontroll. Det var viktigt både för tillgänglighet och för att spelet skulle kännas naturligt med olika typer av input.">
-                            I added Xbox controller support so the game could be fully played with a gamepad. This was
-                            important both for accessibility and for making the game feel natural on different input
-                            devices.
-                        </p>
-                    </div>
-
-                    <div class="spec-feature-media">
-                        <img src="../media/images/projects/beak-noir/controller.gif" alt="Controller support gif">
-                    </div>
-                </section>
-
-                <section class="spec-section">
-                    <h2 data-en="Challenges & Lessons" data-sv="Utmaningar & lärdomar">Challenges & Lessons</h2>
-                    <p data-en="Beak Noir was a valuable project for learning how to build gameplay systems inside the TGA Engine while working in a team production environment. It gave me practical experience with player input, gameplay feedback, and making player-facing systems feel clear and responsive."
-                        data-sv="Beak Noir var ett värdefullt projekt där jag lärde mig att bygga gameplay-system i TGA Engine samtidigt som jag arbetade i en teamproduktion. Jag fick praktisk erfarenhet av spelarinput, gameplay-feedback och hur man gör spelarnära system tydliga och responsiva.">
-                        Beak Noir was a valuable project for learning how to build gameplay systems inside the TGA
-                        Engine while working in a team production environment. It gave me practical experience with
-                        player input, gameplay feedback, and making player-facing systems feel clear and responsive.
-                    </p>
-                </section>
             </div>
         </section>
+
     </main>
 
     <footer>

@@ -42,63 +42,28 @@
             <div class="container">
 
                 <p class="spec-kicker">
-                    Team Project • Lamp Engine
+                    Team Project • The Game Assembly
                 </p>
 
                 <h1 class="spec-title">
-                    Spite - Ashes of Ephtael
+                    Spite
                 </h1>
 
                 <p class="spec-subtitle">
-                    A Diablo-inspired action RPG developed in a team using our in-house engine.
-                    My work focused on enemy AI, behaviour systems, and integrating gameplay with animation and input.
+                    A Diablo-style action RPG built in our custom C++ engine (Lamp Engine), where I worked mainly on
+                    enemy AI and data-driven enemy behavior.
                 </p>
 
-                <!-- MAIN VIDEO -->
-                <div class="spec-media-viewer">
-                    <div class="spec-main-media">
-                        <video class="spec-media-item active" controls id="spec-media-0">
-                            <source src="../media/videos/spite/showcase.mp4" type="video/mp4">
-                        </video>
-
-                        <img class="spec-media-item" id="spec-media-1" src="../media/images/projects/spite/spite_1.PNG"
-                            alt="Spite - Ashes of Ephtael screenshot 1">
-
-                        <img class="spec-media-item" id="spec-media-2"
-                            src="../media/images/projects/spite/spite_2.png"
-                            alt="Spite - Ashes of Ephtael screenshot 2">
-
-                        <img class="spec-media-item" id="spec-media-3"
-                            src="../media/images/projects/spite/spite_3.png"
-                            alt="Spite - Ashes of Ephtael screenshot 3">
-                    </div>
-
-                    <div class="spec-thumbnails">
-                        <button class="spec-thumb active" data-target="0" type="button" aria-label="Show video">
-                            <video muted playsinline>
-                                <source src="../media/videos/spite/showcase.mp4" type="video/mp4">
-                            </video>
-                        </button>
-
-                        <button class="spec-thumb" data-target="1" type="button" aria-label="Show screenshot 1">
-                            <img src="../media/images/projects/spite/spite_1.PNG" alt="Thumbnail 1">
-                        </button>
-
-                        <button class="spec-thumb" data-target="2" type="button" aria-label="Show screenshot 2">
-                            <img src="../media/images/projects/spite/spite_2.png" alt="Thumbnail 2">
-                        </button>
-
-                        <button class="spec-thumb" data-target="3" type="button" aria-label="Show screenshot 3">
-                            <img src="../media/images/projects/spite/spite_3.png" alt="Thumbnail 3">
-                        </button>
-                    </div>
+                <div class="spec-main-media">
+                    <video autoplay muted loop playsinline>
+                        <source src="../media/videos/spite/showcase.mp4" type="video/mp4">
+                    </video>
                 </div>
 
-                <!-- INFO STRIP -->
                 <div class="spec-info-strip">
                     <div class="spec-info-item">
                         <span>Role</span>
-                        <p>Gameplay / AI Programmer</p>
+                        <p>Gameplay Programmer</p>
                     </div>
 
                     <div class="spec-info-item">
@@ -108,105 +73,134 @@
 
                     <div class="spec-info-item">
                         <span>Focus</span>
-                        <p>Enemy AI, State Machines, Combat Behaviour</p>
+                        <p>Enemy AI, Gameplay Systems</p>
                     </div>
 
                     <div class="spec-info-item">
                         <span>Engine</span>
-                        <p>Lamp Engine (Custom)</p>
+                        <p>Lamp Engine / C++</p>
                     </div>
                 </div>
 
             </div>
         </section>
 
-        <!-- WHAT I DID -->
         <section class="spec-content">
             <div class="container spec-content-width">
 
-                <section class="spec-section">
-                    <h2>What I Worked On</h2>
-                    <p>
-                        My main contribution was enemy behaviour and AI systems. I designed and implemented a ranged
-                        enemy
-                        archetype using a state machine, integrated animation with gameplay logic, and contributed to
-                        camera and input systems.
-                    </p>
-                </section>
-
-                <!-- FEATURE 1 -->
+                <!-- AI -->
                 <section class="spec-section spec-feature-row">
                     <div class="spec-feature-text">
                         <h2>Enemy AI & State Machine</h2>
+
                         <p>
-                            Enemy behaviour was structured using a state machine with clear transitions between idle,
-                            chase and attack states. This made behaviour predictable, extendable and easier to debug.
+                            My main contribution was enemy AI. I implemented the full logic for the popcorn enemy using
+                            a state machine.
+                        </p>
+
+                        <p>
+                            The enemy transitions between states like idle, chase, shoot, flee, stunned, and dead based
+                            on distance, cooldowns, and player interaction.
+                        </p>
+
+                        <p>
+                            I also contributed to behavior on some of the other enemies during development.
                         </p>
                     </div>
 
                     <div class="spec-feature-media">
-                        <img src="../media/images/projects/spite/ai.gif" alt="Enemy AI GIF">
+                        <div class="spec-job-gallery">
+
+                            <video class="spec-job-video active" id="job-video-0" autoplay muted loop playsinline>
+                                <source src="../media/videos/spite/ai_chase.mp4" type="video/mp4">
+                            </video>
+
+                            <video class="spec-job-video" id="job-video-1" muted loop playsinline>
+                                <source src="../media/videos/spite/ai_shoot.mp4" type="video/mp4">
+                            </video>
+
+                            <video class="spec-job-video" id="job-video-2" muted loop playsinline>
+                                <source src="../media/videos/spite/ai_flee.mp4" type="video/mp4">
+                            </video>
+
+                            <div class="spec-job-gallery-controls">
+                                <button class="spec-job-button active" type="button" data-job-target="0">Chase</button>
+                                <button class="spec-job-button" type="button" data-job-target="1">Shoot</button>
+                                <button class="spec-job-button" type="button" data-job-target="2">Flee</button>
+                            </div>
+
+                            <p class="spec-video-caption active" data-job-caption="0">
+                                Enemy chasing the player
+                            </p>
+
+                            <p class="spec-video-caption" data-job-caption="1">
+                                Enemy attacking from range
+                            </p>
+
+                            <p class="spec-video-caption" data-job-caption="2">
+                                Enemy fleeing when the player gets too close
+                            </p>
+
+                        </div>
                     </div>
                 </section>
 
-                <!-- FEATURE 2 -->
+                <!-- DATA -->
+                <section class="spec-section spec-feature-row reverse">
+                    <div class="spec-feature-text">
+                        <h2>Data-Driven Enemies & Tools</h2>
+
+                        <p>
+                            Levels were built in Unreal using assets, where we also set values like range, speed, and
+                            damage. This data was exported as JSON and loaded into the engine using our level loader.
+                        </p>
+
+                        <p>
+                            To support this workflow, I created enemy dummy components so level designers could easily
+                            test and iterate on enemy behavior directly in the level.
+                        </p>
+                    </div>
+
+                    <div class="spec-feature-media">
+                        <video autoplay muted loop playsinline>
+                            <source src="../media/videos/spite/combat.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </section>
+
+                <!-- ENGINE -->
                 <section class="spec-section spec-feature-row">
                     <div class="spec-feature-text">
-                        <h2>Ranged Enemy Behaviour</h2>
+                        <h2>Engine & Systems</h2>
+
                         <p>
-                            I created a ranged enemy that attacks using projectiles. The goal was to create pressure at
-                            a
-                            distance while maintaining readable attack patterns.
+                            The game was built in our own C++ engine (Lamp Engine).
+                        </p>
+
+                        <p>
+                            I worked on systems like an input mapper with JSON-based key bindings and contributed to
+                            core engine features such as a state stack and splash screen.
+                        </p>
+
+                        <p>
+                            This project was also my first real exposure to working inside and extending a custom
+                            engine.
                         </p>
                     </div>
 
                     <div class="spec-feature-media">
-                        <img src="../media/images/projects/spite/ranged.gif" alt="Ranged enemy GIF">
+                        <video autoplay muted loop playsinline>
+                            <source src="../media/videos/spite/level.mp4" type="video/mp4">
+                        </video>
                     </div>
                 </section>
 
-                <!-- FEATURE 3 -->
-                <section class="spec-section spec-feature-row">
-                    <div class="spec-feature-text">
-                        <h2>Animation Integration</h2>
-                        <p>
-                            I integrated animation with gameplay logic to ensure that attacks and movement matched the
-                            enemy behaviour states. This improved readability and feedback during combat.
-                        </p>
-                    </div>
-
-                    <div class="spec-feature-media">
-                        <img src="../media/images/projects/spite/animation.gif" alt="Animation integration GIF">
-                    </div>
-                </section>
-
-                <!-- FEATURE 4 -->
-                <section class="spec-section spec-feature-row">
-                    <div class="spec-feature-text">
-                        <h2>Camera & Input Systems</h2>
-                        <p>
-                            I contributed to CameraManager and InputManager to ensure responsive controls and stable
-                            camera
-                            behaviour during gameplay.
-                        </p>
-                    </div>
-
-                    <div class="spec-feature-media">
-                        <img src="../media/images/projects/spite/input.gif" alt="Input system GIF">
-                    </div>
-                </section>
-
-                <!-- TAKEAWAYS -->
+                <!-- TAKEAWAY -->
                 <section class="spec-section">
-                    <h2>Technical Takeaways</h2>
+                    <h2>Takeaway</h2>
                     <p>
-                        This project gave me hands-on experience building gameplay systems inside a custom engine and
-                        working with AI, animation, and input together.
-                    </p>
-                    <p>
-                        It highlighted how important timing and readability are in combat-heavy games, and how even
-                        small
-                        changes in behaviour logic can significantly affect the player experience.
+                        This project gave me my first real experience working with AI systems, animation states, and
+                        data-driven gameplay in a custom engine.
                     </p>
                 </section>
 
