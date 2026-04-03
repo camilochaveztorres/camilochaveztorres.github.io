@@ -829,7 +829,7 @@ body.light-theme .spec-code-panel code {
 .spec-feature-media img,
 .spec-feature-media video {
   width: 100%;
-  display: block;
+  max-width: 520px;
   border-radius: 1.2rem;
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
@@ -848,7 +848,11 @@ body.light-theme .spec-code-panel code {
 
 .spec-feature-media {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+}
+
+.spec-feature-row.reverse .spec-feature-media {
+  justify-content: flex-end;
 }
 
 .featured-label {

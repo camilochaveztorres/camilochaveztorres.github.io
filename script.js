@@ -39,8 +39,28 @@ specThumbs.forEach((thumb) => {
         targetMedia.classList.add('active');
 
         if (targetMedia.tagName === 'VIDEO') {
-            targetMedia.play().catch(() => {});
+            targetMedia.play().catch(() => { });
         }
     });
 });
 
+const videos = document.querySelectorAll('.spec-feature-media video');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        const video = entry.target;
+
+        if (entry.isIntersecting) {
+            video.currentTime = 0;
+            video.play();
+        } else {
+            video.pause();
+        }
+    });
+}, {
+    threshold: 0.5 // 50% måste synas
+});
+
+videos.forEach(video => {
+    observer.observe(video);
+});
