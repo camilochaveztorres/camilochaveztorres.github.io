@@ -197,6 +197,10 @@
                         <video autoplay muted loop playsinline>
                             <source src="../media/videos/specialization/restaurant-overcommit.mp4" type="video/mp4">
                         </video>
+                        <p class="spec-video-caption">
+                            Multiple NPCs commit to the same restaurant before the food situation has updated, which
+                            creates weird behaviour.
+                        </p>
                     </div>
                 </section>
 
@@ -266,9 +270,47 @@ if there is a current action
                     </div>
 
                     <div class="spec-feature-media">
-                        <video autoplay muted loop playsinline>
-                            <source src="../media/videos/specialization/carrier.mp4" type="video/mp4">
-                        </video>
+                        <div class="spec-job-gallery">
+                            <video class="spec-job-video active" id="job-video-0" autoplay muted loop playsinline>
+                                <source src="../media/videos/specialization/carrier.mp4" type="video/mp4">
+                            </video>
+
+                            <video class="spec-job-video" id="job-video-1" muted loop playsinline>
+                                <source src="../media/videos/specialization/fisher.mp4" type="video/mp4">
+                            </video>
+
+                            <video class="spec-job-video" id="job-video-2" muted loop playsinline>
+                                <source src="../media/videos/specialization/hunter.mp4" type="video/mp4">
+                            </video>
+
+                            <video class="spec-job-video" id="job-video-3" muted loop playsinline>
+                                <source src="../media/videos/specialization/woodcutter.mp4" type="video/mp4">
+                            </video>
+
+                            <div class="spec-job-gallery-controls">
+                                <button class="spec-job-button active" type="button"
+                                    data-job-target="0">Carrier</button>
+                                <button class="spec-job-button" type="button" data-job-target="1">Fisher</button>
+                                <button class="spec-job-button" type="button" data-job-target="2">Hunter</button>
+                                <button class="spec-job-button" type="button" data-job-target="3">Woodcutter</button>
+                            </div>
+
+                            <p class="spec-video-caption active" data-job-caption="0">
+                                Carriers carrying
+                            </p>
+
+                            <p class="spec-video-caption" data-job-caption="1">
+                                Fishers fishing
+                            </p>
+
+                            <p class="spec-video-caption" data-job-caption="2">
+                                Hunters hunting
+                            </p>
+
+                            <p class="spec-video-caption" data-job-caption="3">
+                                Woodcutters… woodcuttering
+                            </p>
+                        </div>
                     </div>
                 </section>
 
@@ -306,6 +348,10 @@ if there is a current action
                         <video autoplay muted loop playsinline>
                             <source src="../media/videos/specialization/food-decay-carry.mp4" type="video/mp4">
                         </video>
+                        <p class="spec-video-caption">
+                            Notice how carriers prioritize food based on freshness instead of just going for the nearest
+                            resource.
+                        </p>
                     </div>
                 </section>
 
@@ -332,6 +378,10 @@ if there is a current action
                         <video autoplay muted loop playsinline>
                             <source src="../media/videos/specialization/build-reservation.mp4" type="video/mp4">
                         </video>
+                        <p class="spec-video-caption">
+                            The build site only allows a limited number of NPCs to reserve and work on it at the same
+                            time.
+                        </p>
                     </div>
                 </section>
 

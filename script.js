@@ -64,3 +64,34 @@ const observer = new IntersectionObserver((entries) => {
 videos.forEach(video => {
     observer.observe(video);
 });
+
+const jobButtons = document.querySelectorAll('.spec-job-button');
+const jobVideos = document.querySelectorAll('.spec-job-video');
+const jobCaptions = document.querySelectorAll('[data-job-caption]');
+
+jobButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        const targetIndex = button.dataset.jobTarget;
+        const targetVideo = document.getElementById(`job-video-${targetIndex}`);
+
+        jobButtons.forEach((btn) => btn.classList.remove('active'));
+        jobVideos.forEach((video) => {
+            video.classList.remove('active');
+            video.pause();
+            video.currentTime = 0;
+        });
+        jobCaptions.forEach((caption) => caption.classList.remove('active'));
+
+        button.classList.add('active');
+
+        if (targetVideo) {
+            targetVideo.classList.add('active');
+            targetVideo.play().catch(() => {});
+        }
+
+        const targetCaption = document.querySelector(`[data-job-caption="${targetIndex}"]`);
+        if (targetCaption) {
+            targetCaption.classList.add('active');
+        }
+    });
+});
