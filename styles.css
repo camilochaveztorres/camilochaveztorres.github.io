@@ -1248,15 +1248,6 @@ body.light-theme .spec-job-button.active {
   border: 0;
   display: block;
 }
-.spec-main-media > video,
-.spec-feature-media > video,
-.spec-job-video {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-}
-
 
 @media (max-width: 700px) {
   .spec-main-media iframe {
