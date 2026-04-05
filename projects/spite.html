@@ -116,14 +116,12 @@
 
                         <p>
                             Movement is handled through a NavMesh system together with steering, so the enemy can move
-                            smoothly
-                            through the level and react properly to the player.
+                            through the level and react to the player.
                         </p>
 
                         <p>
                             I also hooked everything up with animations, hit reactions, and combat feedback so the
-                            behavior feels
-                            responsive in-game.
+                            behavior feels responsive in-game.
                         </p>
                     </div>
 
@@ -173,15 +171,52 @@
                     </div>
                 </section>
 
-                <!-- DATA -->
+
+                <!-- ENGINE -->
                 <section class="spec-section spec-feature-row reverse">
                     <div class="spec-feature-text">
-                        <h2>Data-Driven Enemies & Tools</h2>
+                        <h2>Engine & Systems</h2>
+
+                        <p>
+                            The project was built in our custom C++ engine, Lamp Engine.
+                        </p>
+
+                        <p>
+                            I implemented a reusable HealthComponent used across enemies, handling damage, healing, and
+                            communication through the engine’s event system.
+                        </p>
+
+                        <p>
+                            I also implemented an input mapper with JSON-based key bindings, mapping actions to keys
+                            instead of hardcoding input.
+                        </p>
+
+                        <p>
+                            It supports multiple bindings per action, key combinations, and different input states
+                            (pressed, held, released).
+                        </p>
+
+                        <p>
+                            Because it’s data-driven, input could be changed without modifying code.
+                        </p>
+                    </div>
+
+                    <div class="spec-feature-media">
+                        <video autoplay muted loop playsinline>
+                            <source src="../media/videos/spite/level.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </section>
+
+
+                <!-- DATA -->
+                <section class="spec-section spec-feature-row">
+                    <div class="spec-feature-text">
+                        <h2>Data-Driven Enemies</h2>
 
                         <p>
                             Enemy values like range, speed, damage, and behavior settings were defined in Unreal and
-                            exported
-                            as JSON, then loaded into the engine through our level loader.
+                            exported as JSON, then loaded into the engine through our level loader.
                         </p>
 
                         <p>
@@ -197,48 +232,13 @@
                     </div>
                 </section>
 
-                <!-- ENGINE -->
-                <section class="spec-section spec-feature-row">
-                    <div class="spec-feature-text">
-                        <h2>Engine & Systems</h2>
-
-                        <p>
-                            The project was built in our custom C++ engine (Lamp Engine).
-                        </p>
-
-                        <p>
-                            I implemented a reusable HealthComponent used across enemies, handling damage, healing, and
-                            communication through the engine’s event system.
-                        </p>
-
-                        <p>
-                            I also implemented an input mapper with JSON-based key bindings, mapping actions to keys instead
-                            of hardcoding input.
-                        </p>
-
-                        <p>
-                            It supports multiple bindings per action, key combinations, and different input states
-                            (pressed, held, released).
-                        </p>
-
-                        <p>
-                            The system is data-driven, allowing input to be configured without changing code.
-                        </p>
-                    </div>
-
-                    <div class="spec-feature-media">
-                        <video autoplay muted loop playsinline>
-                            <source src="../media/videos/spite/level.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </section>
 
                 <!-- TAKEAWAY -->
                 <section class="spec-section">
                     <h2>Takeaway</h2>
                     <p>
-                        This project helped me understand how AI, combat, and engine systems actually come together in a
-                        real game.
+                        This project gave me a better understanding of how AI behavior, combat, and underlying systems
+                        connect and affect each other in a real game.
                     </p>
                 </section>
 
