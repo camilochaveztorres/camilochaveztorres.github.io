@@ -18,17 +18,23 @@
     <div class="container nav-inner">
       <a href="#" class="brand">Camilo Chavez Torres</a>
 
-      <nav class="nav-links">
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        ☰
+      </button>
+
+      <nav class="nav-links" id="mobile-nav">
         <a href="#" class="nav-home">Home</a>
         <a href="projects/specialization-project.html">Specialization</a>
         <a href="#projects">Projects</a>
         <a href="about-me.html">About</a>
         <a href="#contact">Contact</a>
         <a href="assets/Camilo_Chavez_Torres_CV.pdf" target="_blank" class="primary-button">Resume</a>
+
+        <button class="control-button mobile-theme-button" id="theme-toggle" type="button">🌙 Light</button>
       </nav>
 
-      <div class="top-controls">
-        <button class="control-button" id="theme-toggle" type="button">🌙 Light</button>
+      <div class="top-controls desktop-controls">
+        <button class="control-button" id="theme-toggle-desktop" type="button">🌙 Light</button>
       </div>
     </div>
   </header>
@@ -97,137 +103,141 @@
     </section>
 
     <section id="projects">
-  <div class="container">
-    <h2 class="section-title">Projects</h2>
-    <p class="section-text">
-      A selection of projects created during my studies at The Game Assembly, developed in collaboration with other students.
-    </p>
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-text">
+          A selection of projects created during my studies at The Game Assembly, developed in collaboration with other
+          students.
+        </p>
 
-    <div class="projects-grid">
+        <div class="projects-grid">
 
-      <!-- MARUK -->
-      <a href="projects/maruk.html" class="project-card-link">
-        <article class="project-card">
-          <div class="project-media">
-            <img src="media/images/projects/maruk/maruk_1.png" alt="Maruk gameplay">
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">Maruk - Shipwrecked</h3>
-            <p class="project-desc">
-              A third-person platformer where I focused on companion AI, behavior tree logic, and animation integration.
-            </p>
-            <div class="tags">
-              <span class="tag">AI</span>
-              <span class="tag">Behavior Trees</span>
-              <span class="tag">Gameplay</span>
-            </div>
-          </div>
-        </article>
-      </a>
+          <!-- MARUK -->
+          <a href="projects/maruk.html" class="project-card-link">
+            <article class="project-card">
+              <div class="project-media">
+                <img src="media/images/projects/maruk/maruk_1.png" alt="Maruk gameplay">
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Maruk - Shipwrecked</h3>
+                <p class="project-desc">
+                  A third-person platformer where I focused on companion AI, behavior tree logic, and animation
+                  integration.
+                </p>
+                <div class="tags">
+                  <span class="tag">AI</span>
+                  <span class="tag">Behavior Trees</span>
+                  <span class="tag">Gameplay</span>
+                </div>
+              </div>
+            </article>
+          </a>
 
-      <!-- SPITE -->
-      <a href="projects/spite.html" class="project-card-link">
-        <article class="project-card">
-          <div class="project-media">
-            <img src="media/images/projects/spite/spite_1.PNG" alt="Spite gameplay">
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">Spite - Ashes of Ephtael</h3>
-            <p class="project-desc">
-              A Diablo-inspired action RPG built in our custom engine, where I worked on enemy AI, state machines, and gameplay systems.
-            </p>
-            <div class="tags">
-              <span class="tag">AI</span>
-              <span class="tag">State Machines</span>
-              <span class="tag">Combat</span>
-            </div>
-          </div>
-        </article>
-      </a>
+          <!-- SPITE -->
+          <a href="projects/spite.html" class="project-card-link">
+            <article class="project-card">
+              <div class="project-media">
+                <img src="media/images/projects/spite/spite_1.PNG" alt="Spite gameplay">
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Spite - Ashes of Ephtael</h3>
+                <p class="project-desc">
+                  A Diablo-inspired action RPG built in our custom engine, where I worked on enemy AI, state machines,
+                  and gameplay systems.
+                </p>
+                <div class="tags">
+                  <span class="tag">AI</span>
+                  <span class="tag">State Machines</span>
+                  <span class="tag">Combat</span>
+                </div>
+              </div>
+            </article>
+          </a>
 
-      <!-- BEAK NOIR -->
-      <a href="projects/beak-noir.html" class="project-card-link">
-        <article class="project-card">
-          <div class="project-media">
-            <img src="media/images/projects/beak-noir/beak-noir_1.png" alt="Beak Noir gameplay">
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">Beak Noir</h3>
-            <p class="project-desc">
-              A top-down action shooter where I worked on movement, controller support, HUD, and gameplay systems.
-            </p>
-            <div class="tags">
-              <span class="tag">Gameplay</span>
-              <span class="tag">Controls</span>
-              <span class="tag">C++</span>
-            </div>
-          </div>
-        </article>
-      </a>
+          <!-- BEAK NOIR -->
+          <a href="projects/beak-noir.html" class="project-card-link">
+            <article class="project-card">
+              <div class="project-media">
+                <img src="media/images/projects/beak-noir/beak-noir_1.png" alt="Beak Noir gameplay">
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Beak Noir</h3>
+                <p class="project-desc">
+                  A top-down action shooter where I worked on movement, controller support, HUD, and gameplay systems.
+                </p>
+                <div class="tags">
+                  <span class="tag">Gameplay</span>
+                  <span class="tag">Controls</span>
+                  <span class="tag">C++</span>
+                </div>
+              </div>
+            </article>
+          </a>
 
-      <!-- CRIMSON KEEP -->
-      <a href="projects/crimson-keep.html" class="project-card-link">
-        <article class="project-card">
-          <div class="project-media">
-            <img src="media/images/projects/crimson-keep/crimson-keep_1.png" alt="Crimson Keep gameplay">
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">Crimson Keep</h3>
-            <p class="project-desc">
-              A dark action platformer where I worked on HUD, health and ammo systems, and gameplay features.
-            </p>
-            <div class="tags">
-              <span class="tag">Platformer</span>
-              <span class="tag">HUD</span>
-              <span class="tag">Gameplay</span>
-            </div>
-          </div>
-        </article>
-      </a>
+          <!-- CRIMSON KEEP -->
+          <a href="projects/crimson-keep.html" class="project-card-link">
+            <article class="project-card">
+              <div class="project-media">
+                <img src="media/images/projects/crimson-keep/crimson-keep_1.png" alt="Crimson Keep gameplay">
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Crimson Keep</h3>
+                <p class="project-desc">
+                  A dark action platformer where I worked on HUD, health and ammo systems, and gameplay features.
+                </p>
+                <div class="tags">
+                  <span class="tag">Platformer</span>
+                  <span class="tag">HUD</span>
+                  <span class="tag">Gameplay</span>
+                </div>
+              </div>
+            </article>
+          </a>
 
-      <!-- LIMINAL SPACE -->
-      <a href="projects/liminal-space.html" class="project-card-link">
-        <article class="project-card">
-          <div class="project-media">
-            <img src="media/images/projects/liminal-space/liminal_3.jpg" alt="Liminal Space gameplay">
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">Liminal Space</h3>
-            <p class="project-desc">
-              A puzzle game inspired by Monument Valley, where I implemented interactive platforms and gameplay interactions.
-            </p>
-            <div class="tags">
-              <span class="tag">Unity</span>
-              <span class="tag">Puzzle</span>
-              <span class="tag">Gameplay</span>
-            </div>
-          </div>
-        </article>
-      </a>
+          <!-- LIMINAL SPACE -->
+          <a href="projects/liminal-space.html" class="project-card-link">
+            <article class="project-card">
+              <div class="project-media">
+                <img src="media/images/projects/liminal-space/liminal_3.jpg" alt="Liminal Space gameplay">
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Liminal Space</h3>
+                <p class="project-desc">
+                  A puzzle game inspired by Monument Valley, where I implemented interactive platforms and gameplay
+                  interactions.
+                </p>
+                <div class="tags">
+                  <span class="tag">Unity</span>
+                  <span class="tag">Puzzle</span>
+                  <span class="tag">Gameplay</span>
+                </div>
+              </div>
+            </article>
+          </a>
 
-      <!-- I AM AMBULANCE -->
-      <a href="projects/i-am-ambulance.html" class="project-card-link">
-        <article class="project-card">
-          <div class="project-media">
-            <img src="media/images/projects/ambulance/ambulance.jpg" alt="I Am Ambulance gameplay">
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">I Am Ambulance</h3>
-            <p class="project-desc">
-              An endless runner built in Unity as my first team project, where I worked with audio systems and UI.
-            </p>
-            <div class="tags">
-              <span class="tag">Unity</span>
-              <span class="tag">Audio</span>
-              <span class="tag">First Project</span>
-            </div>
-          </div>
-        </article>
-      </a>
+          <!-- I AM AMBULANCE -->
+          <a href="projects/i-am-ambulance.html" class="project-card-link">
+            <article class="project-card">
+              <div class="project-media">
+                <img src="media/images/projects/ambulance/ambulance.jpg" alt="I Am Ambulance gameplay">
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">I Am Ambulance</h3>
+                <p class="project-desc">
+                  An endless runner built in Unity as my first team project, where I worked with audio systems and UI.
+                </p>
+                <div class="tags">
+                  <span class="tag">Unity</span>
+                  <span class="tag">Audio</span>
+                  <span class="tag">First Project</span>
+                </div>
+              </div>
+            </article>
+          </a>
 
-    </div>
-  </div>
-</section>
+        </div>
+      </div>
+    </section>
 
     <section id="contact">
       <div class="container">

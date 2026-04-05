@@ -1,20 +1,37 @@
 const body = document.body;
 const html = document.documentElement;
-const themeToggleButton = document.getElementById('theme-toggle');
+const themeToggleButtons = document.querySelectorAll('#theme-toggle, #theme-toggle-desktop');
 
 function applyTheme(theme) {
     body.classList.toggle('light-theme', theme === 'light');
-    themeToggleButton.textContent = theme === 'light' ? '🌙 Dark' : '☀️ Light';
+
+    themeToggleButtons.forEach((button) => {
+        button.textContent = theme === 'light' ? '🌙 Dark' : '☀️ Light';
+    });
+
     localStorage.setItem('theme', theme);
 }
 
 const savedTheme = localStorage.getItem('theme') || 'dark';
 applyTheme(savedTheme);
 
-themeToggleButton.addEventListener('click', () => {
-    const nextTheme = body.classList.contains('light-theme') ? 'dark' : 'light';
-    applyTheme(nextTheme);
+themeToggleButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        const nextTheme = body.classList.contains('light-theme') ? 'dark' : 'light';
+        applyTheme(nextTheme);
+    });
 });
+
+const navToggleButton = document.getElementById('nav-toggle');
+const mobileNav = document.getElementById('mobile-nav');
+
+if (navToggleButton && mobileNav) {
+    navToggleButton.addEventListener('click', () => {
+        const isOpen = mobileNav.classList.toggle('nav-open');
+        navToggleButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        navToggleButton.textContent = isOpen ? '✕' : '☰';
+    });
+}
 
 const specThumbs = document.querySelectorAll('.spec-thumb');
 const specMediaItems = document.querySelectorAll('.spec-media-item');

@@ -19,17 +19,23 @@
     <div class="container nav-inner">
       <a href="../index.html#" class="brand">Camilo Chavez Torres</a>
 
-      <nav class="nav-links">
-        <a href="../index.html">Home</a>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        ☰
+      </button>
+
+      <nav class="nav-links" id="mobile-nav">
+        <a href="../index.html" class="nav-home">Home</a>
         <a href="../projects/specialization-project.html">Specialization</a>
         <a href="../index.html#projects">Projects</a>
         <a href="../about-me.html">About</a>
         <a href="../index.html#contact">Contact</a>
         <a href="../assets/Camilo_Chavez_Torres_CV.pdf" target="_blank" class="primary-button">Resume</a>
+
+        <button class="control-button mobile-theme-button" id="theme-toggle" type="button">🌙 Light</button>
       </nav>
 
-      <div class="top-controls">
-        <button class="control-button" id="theme-toggle" type="button">🌙 Light</button>
+      <div class="top-controls desktop-controls">
+        <button class="control-button" id="theme-toggle-desktop" type="button">🌙 Light</button>
       </div>
     </div>
   </header>
