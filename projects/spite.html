@@ -100,17 +100,30 @@
                         <h2>Enemy AI & State Machine</h2>
 
                         <p>
-                            My main contribution was enemy AI. I implemented the full logic for the popcorn enemy using
-                            a state machine.
+                            My main focus was the popcorn enemy, built using a state machine.
                         </p>
 
                         <p>
-                            The enemy transitions between states like idle, chase, shoot, flee, stunned, and dead based
-                            on distance, cooldowns, and player interaction.
+                            It switches between idle, chase, shoot, flee, stunned, and dead states depending on
+                            distance,
+                            cooldowns, and player interaction.
                         </p>
 
                         <p>
-                            I also contributed to behavior on some of the other enemies during development.
+                            The enemy doesn’t flee all the time. It uses a timer and cooldown, so it only backs off in
+                            certain situations.
+                        </p>
+
+                        <p>
+                            Movement is handled through a NavMesh system together with steering, so the enemy can move
+                            smoothly
+                            through the level and react properly to the player.
+                        </p>
+
+                        <p>
+                            I also hooked everything up with animations, hit reactions, and combat feedback so the
+                            behavior feels
+                            responsive in-game.
                         </p>
                     </div>
 
@@ -129,22 +142,31 @@
                                 <source src="../media/videos/spite/ai_flee.mp4" type="video/mp4">
                             </video>
 
+                            <video class="spec-job-video" id="job-video-3" muted loop playsinline>
+                                <source src="../media/videos/spite/ai_stunned.mp4" type="video/mp4">
+                            </video>
+
                             <div class="spec-job-gallery-controls">
                                 <button class="spec-job-button active" type="button" data-job-target="0">Chase</button>
                                 <button class="spec-job-button" type="button" data-job-target="1">Shoot</button>
                                 <button class="spec-job-button" type="button" data-job-target="2">Flee</button>
+                                <button class="spec-job-button" type="button" data-job-target="3">Stunned</button>
                             </div>
 
                             <p class="spec-video-caption active" data-job-caption="0">
-                                Enemy chasing the player
+                                Enemy navigating towards the player using NavMesh pathfinding
                             </p>
 
                             <p class="spec-video-caption" data-job-caption="1">
-                                Enemy attacking from range
+                                Enemy stopping and attacking from range
                             </p>
 
                             <p class="spec-video-caption" data-job-caption="2">
-                                Enemy fleeing when the player gets too close
+                                Enemy temporarily retreating when the player gets too close
+                            </p>
+
+                            <p class="spec-video-caption" data-job-caption="3">
+                                Enemies becoming temporarily stunned
                             </p>
 
                         </div>
@@ -157,13 +179,14 @@
                         <h2>Data-Driven Enemies & Tools</h2>
 
                         <p>
-                            Levels were built in Unreal using assets, where we also set values like range, speed, and
-                            damage. This data was exported as JSON and loaded into the engine using our level loader.
+                            Enemy values like range, speed, damage, and behavior settings were defined in Unreal and
+                            exported
+                            as JSON, then loaded into the engine through our level loader.
                         </p>
 
                         <p>
-                            To support this workflow, I created enemy dummy components so level designers could easily
-                            test and iterate on enemy behavior directly in the level.
+                            I also created enemy dummy components that we mainly used in our gyms to test animations and
+                            basic behavior.
                         </p>
                     </div>
 
@@ -180,17 +203,26 @@
                         <h2>Engine & Systems</h2>
 
                         <p>
-                            The game was built in our own C++ engine (Lamp Engine).
+                            The project was built in our custom C++ engine (Lamp Engine).
                         </p>
 
                         <p>
-                            I worked on systems like an input mapper with JSON-based key bindings and contributed to
-                            core engine features such as a state stack and splash screen.
+                            I implemented a reusable HealthComponent used across enemies, handling damage, healing, and
+                            communication through the engine’s event system.
                         </p>
 
                         <p>
-                            This project was also my first real exposure to working inside and extending a custom
-                            engine.
+                            I also implemented an input mapper with JSON-based key bindings, mapping actions to keys instead
+                            of hardcoding input.
+                        </p>
+
+                        <p>
+                            It supports multiple bindings per action, key combinations, and different input states
+                            (pressed, held, released).
+                        </p>
+
+                        <p>
+                            The system is data-driven, allowing input to be configured without changing code.
                         </p>
                     </div>
 
@@ -205,8 +237,8 @@
                 <section class="spec-section">
                     <h2>Takeaway</h2>
                     <p>
-                        This project gave me my first real experience working with AI systems, animation states, and
-                        data-driven gameplay in a custom engine.
+                        This project helped me understand how AI, combat, and engine systems actually come together in a
+                        real game.
                     </p>
                 </section>
 
