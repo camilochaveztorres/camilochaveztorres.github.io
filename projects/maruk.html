@@ -135,7 +135,7 @@
 
                         <p>
                             The blackboard stored shared state like offsets, target positions, collectibles, and
-                            temporary behavior flags, which allowed different parts of the AI to work together.
+                            temporary behavior flags which allowed different parts of the AI to work together.
                         </p>
                     </div>
 
@@ -244,7 +244,8 @@
                         </p>
 
                         <p>
-                            I created several visual scripting nodes so designers could control his behavior, such as
+                            I created several visual scripting nodes so that others in our group could control his
+                            behavior, such as
                             making him face the player, move to a position, lock back to the player, or spawn and
                             despawn during gameplay.
                         </p>
@@ -263,18 +264,20 @@
                         <h2>Animation & Gameplay Integration</h2>
 
                         <p>
-                            I did not build the animation system itself, but I used it to connect Greedy’s behavior to
-                            the correct animation states.
+                            I didn’t build the animation system itself but I hooked it up to the behaviour tree so
+                            Greedy could play the right animations based on what each node was doing.
                         </p>
 
                         <p>
-                            This was important for making the companion feel readable and expressive, not just
-                            technically correct.
+                            Some nodes were also a bit more involved. For example, when Greedy changed position around
+                            the player, I used the player’s facing direction together with the camera angle to figure
+                            out which movement animation should play.
                         </p>
 
                         <p>
-                            It gave me more experience working across AI, movement, and existing gameplay systems.
+                            That made it much easier to understand what Greedy was doing just by looking at him.
                         </p>
+ 
                     </div>
 
                     <div class="spec-feature-media">
@@ -290,11 +293,11 @@
 
                     <p>
                         This project was a big step for me. It was my first time working with a more advanced AI setup
-                        using behavior trees and a blackboard.
+                        using behavior trees.
                     </p>
 
                     <p>
-                        It also made me more comfortable building systems that feel good in-game, not just work
+                        It also made me more comfortable building systems that feel good in-game and not just work
                         technically.
                     </p>
 
