@@ -141,7 +141,7 @@
                         </p>
 
                         <p>
-                            This turned out to be important in practice. If an action wasn’t marked as
+                            This turned out to matter more than I expected. If an action wasn’t marked as
                             non-interruptible it could instantly cancel itself when new decisions were made.
                         </p>
 
@@ -153,7 +153,8 @@
                         </p>
 
                         <p>
-                            The system is built to be simple and easy to reason about, which helped a lot early on.
+                            The update loop itself is very simple which made it easy to follow what was happening early
+                            on.
                         </p>
 
                         <p>
@@ -197,7 +198,7 @@ if there is a current action
                             <source src="../media/videos/specialization/build-house.mp4" type="video/mp4">
                         </video>
                         <p class="spec-video-caption">
-                            The carry action uses a internal state machine.
+                            The build action uses a internal state machine.
                         </p>
                     </div>
                 </section>
@@ -263,7 +264,7 @@ if there is a current action
                             <p class="spec-video-caption active">Carriers carrying</p>
                             <p class="spec-video-caption">Fishers fishing</p>
                             <p class="spec-video-caption">Hunters hunting</p>
-                            <p class="spec-video-caption">Woodcutters… woodcuttering</p>
+                            <p class="spec-video-caption">Woodcutters woodcutting</p>
                         </div>
                     </div>
                 </section>
@@ -314,11 +315,11 @@ if there is a current action
                         <h2>Reservation & Task Ownership</h2>
                         <p>
                             Reservation became important once multiple NPCs started going for the same things.
-                            It wasn’t something I planned for early on which made it harder to introduce later.
+                            It wasn’t something I planned for early on which made it harder to add later.
                         </p>
 
                         <p>
-                            At first, restaurants only tracked total food and NPCs just checked if any food existed.
+                            At first restaurants only tracked total food and NPCs just checked if any food existed.
                             That worked fine until multiple NPCs started using the same restaurant.
                         </p>
 
@@ -328,36 +329,48 @@ if there is a current action
                         </p>
 
                         <p>
-                            The AI was still picking restaurants based on total food while the eating logic needed
-                            available (non-reserved) food. So NPCs could decide to eat but then fail when they got
-                            there.
+                            NPCs could see that a restaurant had food and decide to eat but the Eat action would fail
+                            because none of that
+                            food was actually available.
                         </p>
 
                         <p>
-                            Carriers also still used the old logic and delivered based on total food.
-                            So a restaurant could look like it had food but still not actually be usable.
+                            The AI was still making decisions based on total food, while the eating logic needed
+                            available (non-reserved) food.
                         </p>
 
                         <p>
-                            Fixing this meant touching a lot of different systems. The AI had to use new queries and
-                            actions needed to reserve and release food properly. The POIs also had to track reserved vs
-                            available food.
+                            Carriers also still used the old logic and delivered based on total food so a restaurant
+                            could look like it had
+                            food while there was nothing usable.
                         </p>
 
                         <p>
-                            After that another issue showed up. NPCs would sometimes just stop eating,
-                            even though food existed.
+                            Fixing this meant touching several systems. The AI had to use reservation-aware queries,
+                            actions needed to reserve
+                            and release food correctly, and POIs had to track reserved and available food separately.
                         </p>
 
                         <p>
-                            That turned out to be because the AI required too much available food before choosing to
-                            eat
-                            and carriers would still prioritize delivery over their own needs.
+                            After that, another issue showed up. NPCs would sometimes stop eating completely, even
+                            though food existed.
                         </p>
 
                         <p>
-                            I fixed it by lowering the requirement and moving hunger higher in the priority.
-                            After that things started behaving more as expected again.
+                            This happened because the AI required too much available food before choosing to eat, and
+                            carriers prioritized
+                            delivery over their own needs.
+                        </p>
+
+                        <p>
+                            I fixed it by lowering the requirement and moving hunger higher in the priority. After that,
+                            behaviour started
+                            making sense again.
+                        </p>
+
+                        <p>
+                            The main issue was that different systems were using different definitions of what "available food"
+                            actually meant.
                         </p>
                     </div>
 
