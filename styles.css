@@ -162,15 +162,15 @@ body.light-theme .nav-links a:hover {
 
 .hero-copy h1 {
   white-space: nowrap;
-  margin-bottom: 1rem;
+  margin-bottom: 1.9rem;
 }
 
 .hero .hero-sub {
-  margin: 0 0 1.6rem;
+  margin: 0 0 2.6rem;
   color: var(--muted);
   font-size: 1.08rem;
   line-height: 1.75;
-  max-width: 38ch;
+  max-width: 55ch;
 }
 
 @media (max-width: 900px) {
