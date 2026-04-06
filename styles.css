@@ -173,6 +173,22 @@ body.light-theme .nav-links a:hover {
   max-width: 55ch;
 }
 
+.spec-build-video {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.spec-build-video video {
+  width: 100%;
+  border-radius: 1.2rem;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  background: #000;
+}
+
 @media (max-width: 900px) {
   .hero-copy h1 {
     white-space: normal;

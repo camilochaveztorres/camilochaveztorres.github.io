@@ -82,33 +82,41 @@ videos.forEach(video => {
     observer.observe(video);
 });
 
-const jobButtons = document.querySelectorAll('.spec-job-button');
-const jobVideos = document.querySelectorAll('.spec-job-video');
-const jobCaptions = document.querySelectorAll('[data-job-caption]');
+const jobGalleries = document.querySelectorAll('.spec-job-gallery');
 
-jobButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-        const targetIndex = button.dataset.jobTarget;
-        const targetVideo = document.getElementById(`job-video-${targetIndex}`);
+jobGalleries.forEach((gallery) => {
+    const buttons = gallery.querySelectorAll('.spec-job-button');
+    const videos = gallery.querySelectorAll('.spec-job-video');
+    const captions = gallery.querySelectorAll('.spec-video-caption');
 
-        jobButtons.forEach((btn) => btn.classList.remove('active'));
-        jobVideos.forEach((video) => {
-            video.classList.remove('active');
-            video.pause();
-            video.currentTime = 0;
+    buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+            const targetIndex = Number(button.dataset.jobTarget);
+
+            buttons.forEach((btn) => btn.classList.remove('active'));
+
+            videos.forEach((video) => {
+                video.classList.remove('active');
+                video.pause();
+                video.currentTime = 0;
+            });
+
+            captions.forEach((caption) => {
+                caption.classList.remove('active');
+            });
+
+            button.classList.add('active');
+
+            const targetVideo = videos[targetIndex];
+            if (targetVideo) {
+                targetVideo.classList.add('active');
+                targetVideo.play().catch(() => {});
+            }
+
+            const targetCaption = captions[targetIndex];
+            if (targetCaption) {
+                targetCaption.classList.add('active');
+            }
         });
-        jobCaptions.forEach((caption) => caption.classList.remove('active'));
-
-        button.classList.add('active');
-
-        if (targetVideo) {
-            targetVideo.classList.add('active');
-            targetVideo.play().catch(() => {});
-        }
-
-        const targetCaption = document.querySelector(`[data-job-caption="${targetIndex}"]`);
-        if (targetCaption) {
-            targetCaption.classList.add('active');
-        }
     });
 });
