@@ -48,7 +48,8 @@
                 <h1 class="spec-title">City Simulation</h1>
 
                 <p class="spec-subtitle">
-                    A city simulation project built in TGE (The Game Assemblys custom C++ engine), focused on how NPCs react to needs, schedules, scarcity and
+                    A city simulation project built in TGE (The Game Assemblys custom C++ engine), focused on how NPCs
+                    react to needs, schedules, scarcity and
                     a changing world instead of following scripted behaviour.
                 </p>
 
@@ -85,40 +86,60 @@
         <section class="spec-content">
             <div class="container spec-content-width">
 
+                <section class="spec-section spec-feature-row">
+
+                    <div class="spec-feature-text">
+                        <h2>Why this project</h2>
+
+                        <p>
+                            I’ve always liked simulation games where systems create stories on their own.
+                            You give characters direction, but they still act independently, which makes
+                            the world feel alive.
+                        </p>
+
+                        <p>
+                            Going into this project, I wanted to work with AI. My first idea was to make
+                            something closer to a Radiant AI system inspired by Oblivion, with NPCs that
+                            could act independently of the player.
+                        </p>
+
+                        <p>
+                            As the project evolved, it shifted more towards a colony simulation.
+                            Partly because of scope, but also because I became more interested in building
+                            behaviour from simple systems and interactions instead of something more scripted.
+                        </p>
+                    </div>
+
+                    <div class="spec-feature-media">
+                        <img src="../media/images/projects/specialization/rimworld.jpg" alt="RimWorld screenshot">
+                        <p class="spec-video-caption">
+                            I am a big fan of sim games like RimWorld
+                        </p>
+                    </div>
+
+                </section>
+
                 <section class="spec-section">
-                    <h2>Overview</h2>
+                    <h2>Project goal</h2>
 
                     <p>
-                        I've always enjoyed colony and city simulation games because I like seeing stories unfold over
-                        time. You give your colonists direction but they still have some autonomy, which makes the
-                        world feel alive.
+                        The goal of this project was to make NPCs feel alive by letting them react to
+                        the world and their own needs instead of following a script.
                     </p>
 
                     <p>
-                        Going into this project, I knew I wanted to work with AI. My initial idea was to build something
-                        similar to a Radiant AI system inspired by Oblivion, since I’ve always been fascinated by NPCs
-                        that seem to live their own lives independently of the player.
+                        Instead of focusing on one mechanic, I wanted to build a small system-driven
+                        world where NPCs go through daily routines, respond to scarcity, and change
+                        their behaviour based on what is actually happening around them.
                     </p>
 
                     <p>
-                        As I started building the project, it shifted more towards a colony sim instead. Partly because
-                        of scope but also because I became more interested in building a system where behaviour comes
-                        from simple rules and interactions rather than something more scripted.
+                        I wanted NPCs to feel like they are part of the same world, reacting to the
+                        same conditions rather than acting on their own.
                     </p>
 
                     <p>
-                        That ended up shaping the goal of the project.
-                    </p>
-
-                    <p>
-                        The goal of this project was to make NPCs feel alive by letting them react to the world and
-                        their own needs instead of following a script.
-                    </p>
-
-                    <p>
-                        Instead of focusing on one mechanic, I wanted to build a small world where NPCs go through daily
-                        routines, react to scarcity, and change their behaviour based on what is actually happening
-                        around them.
+                        I didn’t want to script behaviour directly but to let it come from how the systems interact.
                     </p>
                 </section>
 
@@ -319,10 +340,12 @@ if there is a current action
                         </p>
 
                         <p>
-                            Reservation is the idea of “claiming” a resource ahead of time so others can’t use it at the same time.
+                            Reservation is the idea of “claiming” a resource ahead of time so others can’t use it at the
+                            same time.
                         </p>
                         <p>
-                            In my system it became necessary once multiple NPCs started interacting with the same resources, like food in a restaurant.
+                            In my system it became necessary once multiple NPCs started interacting with the same
+                            resources, like food in a restaurant.
                         </p>
 
                         <p>
@@ -380,7 +403,8 @@ if there is a current action
                         </p>
 
                         <p>
-                            The main issue was that different systems were using different definitions of what "available food"
+                            The main issue was that different systems were using different definitions of what
+                            "available food"
                             actually meant.
                         </p>
                     </div>
@@ -402,7 +426,8 @@ if there is a current action
                             </div>
 
                             <p class="spec-video-caption active">
-                                Multiple NPCs go to the same restaurant at the same time even though there isn’t enough food
+                                Multiple NPCs go to the same restaurant at the same time even though there isn’t enough
+                                food
                                 for all of them.
                             </p>
 
