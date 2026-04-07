@@ -165,7 +165,8 @@
                         </p>
 
                         <p>
-                            The update loop itself is very simple which made it easy to follow what was happening early on.
+                            The update loop itself is very simple which made it easy to follow what was happening early
+                            on.
                         </p>
 
                         <p>
@@ -185,7 +186,7 @@
                         <p>
                             For example, a build action can move through states like going to a warehouse,
                             going to the build site and then building.
-                        </p>                      
+                        </p>
 
                     </div>
 
@@ -236,32 +237,34 @@ if there is a current action
                 <section class="spec-section spec-feature-row reverse">
                     <div class="spec-feature-text">
                         <h2>Simulation & NPC Behaviour</h2>
+
                         <p>
-                            A typical NPC moves through a simple daily loop. They work, get hungry, eat, get tired,
-                            relax, and eventually go to sleep. This is not a fixed sequence. It comes from their needs
-                            and from what is currently available in the world.
+                            A typical NPC moves through a simple daily loop. They work, get hungry, eat,
+                            get tired, relax, and eventually go to sleep.
                         </p>
 
                         <p>
-                            The behaviour is also driven by a priority order. Hunger is checked first, then tiredness,
-                            then shared world tasks like building. If none of those take priority, the NPC falls back
-                            to its current schedule. Carriers also have special rules, since urgent food transport can
-                            override their normal work behaviour.
+                            This is not a fixed sequence. It comes from their needs and from what is
+                            currently happening in the world.
                         </p>
 
                         <p>
-                            Because hunger has a high priority, NPCs will try to eat as soon as possible.
+                            The behaviour is also driven by a priority order. Hunger is checked first,
+                            then tiredness, then shared world tasks like building.
                         </p>
 
                         <p>
-                            Before introducing reservation, this often caused multiple NPCs to go to the same
-                            restaurant at the same time, even if there wasn’t enough food.
+                            If none of those take priority, the NPC falls back to its current schedule.
                         </p>
 
                         <p>
-                            This was later fixed by adding a reservation system that made it possible for NPCs to
-                            reserve food
-                            before committing to an eating action.
+                            Carriers also have special rules, since urgent food transport can override
+                            their normal work behaviour.
+                        </p>
+
+                        <p>
+                            This means NPCs are not just following routines. They constantly react to
+                            changing conditions, which makes the simulation feel less scripted.
                         </p>
                     </div>
 
