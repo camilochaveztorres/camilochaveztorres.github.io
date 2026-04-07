@@ -43,7 +43,7 @@
 
     <main class="spec-page">
 
-        <!-- HERO -->
+
         <section class="spec-hero">
             <div class="container">
 
@@ -94,7 +94,7 @@
         <section class="spec-content">
             <div class="container spec-content-width">
 
-                <!-- AI -->
+                
                 <section class="spec-section spec-feature-row">
                     <div class="spec-feature-text">
                         <h2>Enemy AI & State Machine</h2>
@@ -171,8 +171,6 @@
                     </div>
                 </section>
 
-
-                <!-- ENGINE -->
                 <section class="spec-section spec-feature-row reverse">
                     <div class="spec-feature-text">
                         <h2>Engine & Systems</h2>
@@ -202,33 +200,43 @@
                     </div>
 
                     <div class="spec-feature-media">
-                        <video autoplay muted loop playsinline>
-                            <source src="../media/videos/spite/level.mp4" type="video/mp4">
-                        </video>
+                        <div class="spec-build-video">
+                            <img src="../media/images/projects/spite/lamp_engine.png" alt="Lamp Engine"
+                                class="spec-image">
+
+                            <p class="spec-video-caption">
+                                Lamp Engine, our custom C++ game engine used for the project.
+                            </p>
+                        </div>
                     </div>
                 </section>
 
 
-                <!-- DATA -->
                 <section class="spec-section spec-feature-row">
                     <div class="spec-feature-text">
                         <h2>Data-Driven Enemies</h2>
 
                         <p>
-                            Enemy values like range, speed, damage, and behavior settings were defined in Unreal and
-                            exported as JSON, then loaded into the engine through our level loader.
+                            Enemy values like range, speed, damage, and behaviour settings were defined
+                            in Unreal and exported as JSON, then loaded into the engine through our level loader.
                         </p>
 
                         <p>
-                            I also created enemy dummy components that we mainly used in our gyms to test animations and
-                            basic behavior.
+                            The loader reads custom enemy components and maps their values into init data
+                            for each enemy type, so things like aggro range, attack range, health, movement
+                            speed, and projectile values could be changed without hardcoding them directly
+                            in the enemy classes.
                         </p>
-                    </div>
 
-                    <div class="spec-feature-media">
-                        <video autoplay muted loop playsinline>
-                            <source src="../media/videos/spite/combat.mp4" type="video/mp4">
-                        </video>
+                        <p>
+                            This made it easier to tune enemies and iterate on behaviour without having to
+                            rework the gameplay code every time a value changed.
+                        </p>
+
+                        <p>
+                            I also created enemy dummy components that we mainly used in our gyms to test
+                            animations and basic behaviour in a simpler setup.
+                        </p>
                     </div>
                 </section>
 

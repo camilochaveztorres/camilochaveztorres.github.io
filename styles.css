@@ -202,6 +202,16 @@ body.light-theme .nav-links a:hover {
   background: #000;
 }
 
+.spec-image {
+  width: 100%;
+  max-height: 320px;
+  object-fit: contain;
+  display: block;
+  border-radius: 1.2rem;
+  background-color: #0f1117;
+  padding: 2rem;
+}
+
 .spec-image-caption {
   margin-top: 0.75rem;
   color: var(--muted);
