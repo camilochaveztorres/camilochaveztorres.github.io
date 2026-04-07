@@ -932,6 +932,7 @@ body.light-theme .featured-label {
 }
 
 .spec-code-block {
+  width: 100%;
   margin-top: 1.5rem;
   border: 1px solid rgba(125, 211, 252, 0.16);
   border-radius: 20px;

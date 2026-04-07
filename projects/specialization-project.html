@@ -144,48 +144,62 @@
                 </section>
 
                 <section class="spec-section spec-feature-row">
+
                     <div class="spec-feature-text">
                         <h2>AI Structure – Brain & Actions</h2>
+
                         <p>
                             I built the AI around a simple Brain + Action structure.
                         </p>
 
                         <p>
                             The Brain decides what an NPC should do based on needs, schedule, and the current world
-                            state, while Actions handle the actual behaviour.
+                            state,
+                            while Actions handle the actual behaviour.
                         </p>
 
                         <p>
                             Each frame, the NPC either continues its current action or switches to a new one if the
-                            action has finished or should be interrupted. Some actions, like eating, sleeping,
-                            building, or carrying resources, are not allowed to be interrupted once they have started.
+                            action
+                            has finished or should be interrupted.
                         </p>
 
                         <p>
-                            This turned out to matter more than I expected. If an action wasn’t marked as
-                            non-interruptible it could instantly cancel itself when new decisions were made.
+                            The update loop itself is very simple which made it easy to follow what was happening early on.
                         </p>
 
                         <p>
-                            Some actions also work like small state machines internally. For example, a build action can
-                            move through steps like going to a warehouse, going to the build site, and then building.
-                            That made it easier to keep each action self-contained instead of pushing all that logic
-                            into the Brain.
+                            Some actions, like eating, sleeping, building or carrying resources, are not allowed to be
+                            interrupted once they have started.
                         </p>
 
                         <p>
-                            The update loop itself is very simple which made it easy to follow what was happening early
-                            on.
+                            Without it, actions could cancel themselves immediately when new decisions were made
+                            which, led to very weird behaviour.
                         </p>
 
                         <p>
-                            However, as more systems were added, especially reservation, it became much harder to
-                            debug and extend than I initially expected.
+                            Some actions also use small state machines internally.
                         </p>
 
-                        <p class="spec-code-intro">
-                            At the core of the AI is a very simple update loop:
+                        <p>
+                            For example, a build action can move through states like going to a warehouse,
+                            going to the build site and then building.
+                        </p>                      
+
+                    </div>
+
+                    <div class="spec-feature-media">
+
+                        <!-- VIDEO -->
+                        <video autoplay muted loop playsinline>
+                            <source src="../media/videos/specialization/build-house.mp4" type="video/mp4">
+                        </video>
+
+                        <p class="spec-video-caption">
+                            The build action uses a internal state machine.
                         </p>
+
                         <details class="spec-code-block">
                             <summary>View Brain::Update pseudocode</summary>
 
@@ -209,18 +223,13 @@ if there is a current action
 {
     update the action
 }</code></pre>
-
                             </div>
                         </details>
-                    </div>
 
-                    <div class="spec-feature-media">
-                        <video autoplay muted loop playsinline>
-                            <source src="../media/videos/specialization/build-house.mp4" type="video/mp4">
-                        </video>
                         <p class="spec-video-caption">
-                            The build action uses a internal state machine.
+                            At the core of the AI is a very simple update loop.
                         </p>
+
                     </div>
                 </section>
 
