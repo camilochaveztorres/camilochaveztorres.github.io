@@ -48,7 +48,8 @@
                 <h1 class="spec-title">City Simulation</h1>
 
                 <p class="spec-subtitle">
-                    A city simulation project built in TGE (The Game Assemblys custom C++ engine), focused on how NPCs react to needs, schedules, scarcity and
+                    A city simulation project built in TGE (The Game Assemblys custom C++ engine), focused on how NPCs
+                    react to needs, schedules, scarcity and
                     a changing world instead of following scripted behaviour.
                 </p>
 
@@ -85,71 +86,82 @@
         <section class="spec-content">
             <div class="container spec-content-width">
 
+                <section class="spec-section spec-feature-row">
+
+                    <div class="spec-feature-text">
+                        <h2>Why this project</h2>
+
+                        <p>
+                            I’ve always liked simulation games where systems create stories on their own.
+                            You give characters direction, but they still act independently, which makes
+                            the world feel alive.
+                        </p>
+
+                        <p>
+                            Going into this project, I wanted to work with AI. My first idea was to make
+                            something closer to a Radiant AI system inspired by Oblivion, with NPCs that
+                            could act independently of the player.
+                        </p>
+
+                        <p>
+                            As the project evolved, it shifted more towards a colony simulation.
+                            Partly because of scope, but also because I became more interested in building
+                            behaviour from simple systems and interactions instead of something more scripted.
+                        </p>
+                    </div>
+
+                    <div class="spec-feature-media">
+                        <img src="../media/images/projects/specialization/rimworld.jpg" alt="RimWorld screenshot">
+                        <p class="spec-video-caption">
+                            I am a big fan of sim games like RimWorld
+                        </p>
+                    </div>
+
+                </section>
+
                 <section class="spec-section">
-                    <h2>Overview</h2>
+                    <h2>Project goal</h2>
 
                     <p>
-                        I've always enjoyed colony and city simulation games because I like seeing stories unfold over
-                        time. You give your colonists direction but they still have some autonomy, which makes the
-                        world feel alive.
+                        The goal of this project was to make NPCs feel alive by letting them react to
+                        the world and their own needs instead of following a script.
                     </p>
 
                     <p>
-                        Going into this project, I knew I wanted to work with AI. My initial idea was to build something
-                        similar to a Radiant AI system inspired by Oblivion, since I’ve always been fascinated by NPCs
-                        that seem to live their own lives independently of the player.
+                        Instead of focusing on one mechanic, I wanted to build a small system-driven
+                        world where NPCs go through daily routines, respond to scarcity, and change
+                        their behaviour based on what is actually happening around them.
                     </p>
 
                     <p>
-                        As I started building the project, it shifted more towards a colony sim instead. Partly because
-                        of scope but also because I became more interested in building a system where behaviour comes
-                        from simple rules and interactions rather than something more scripted.
+                        I wanted NPCs to feel like they are part of the same world, reacting to the
+                        same conditions rather than acting on their own.
                     </p>
 
                     <p>
-                        That ended up shaping the goal of the project.
-                    </p>
-
-                    <p>
-                        The goal of this project was to make NPCs feel alive by letting them react to the world and
-                        their own needs instead of following a script.
-                    </p>
-
-                    <p>
-                        Instead of focusing on one mechanic, I wanted to build a small world where NPCs go through daily
-                        routines, react to scarcity, and change their behaviour based on what is actually happening
-                        around them.
+                        I didn’t want to script behaviour directly but to let it come from how the systems interact.
                     </p>
                 </section>
 
                 <section class="spec-section spec-feature-row">
+
                     <div class="spec-feature-text">
                         <h2>AI Structure – Brain & Actions</h2>
+
                         <p>
                             I built the AI around a simple Brain + Action structure.
                         </p>
 
                         <p>
                             The Brain decides what an NPC should do based on needs, schedule, and the current world
-                            state, while Actions handle the actual behaviour.
+                            state,
+                            while Actions handle the actual behaviour.
                         </p>
 
                         <p>
                             Each frame, the NPC either continues its current action or switches to a new one if the
-                            action has finished or should be interrupted. Some actions, like eating, sleeping,
-                            building, or carrying resources, are not allowed to be interrupted once they have started.
-                        </p>
-
-                        <p>
-                            This turned out to matter more than I expected. If an action wasn’t marked as
-                            non-interruptible it could instantly cancel itself when new decisions were made.
-                        </p>
-
-                        <p>
-                            Some actions also work like small state machines internally. For example, a build action can
-                            move through steps like going to a warehouse, going to the build site, and then building.
-                            That made it easier to keep each action self-contained instead of pushing all that logic
-                            into the Brain.
+                            action
+                            has finished or should be interrupted.
                         </p>
 
                         <p>
@@ -158,13 +170,37 @@
                         </p>
 
                         <p>
-                            However, as more systems were added, especially reservation, it became much harder to
-                            debug and extend than I initially expected.
+                            Some actions, like eating, sleeping, building or carrying resources, are not allowed to be
+                            interrupted once they have started.
                         </p>
 
-                        <p class="spec-code-intro">
-                            At the core of the AI is a very simple update loop:
+                        <p>
+                            Without it, actions could cancel themselves immediately when new decisions were made
+                            which, led to very weird behaviour.
                         </p>
+
+                        <p>
+                            Some actions also use small state machines internally.
+                        </p>
+
+                        <p>
+                            For example, a build action can move through states like going to a warehouse,
+                            going to the build site and then building.
+                        </p>
+
+                    </div>
+
+                    <div class="spec-feature-media">
+
+                        <!-- VIDEO -->
+                        <video autoplay muted loop playsinline>
+                            <source src="../media/videos/specialization/build-house.mp4" type="video/mp4">
+                        </video>
+
+                        <p class="spec-video-caption">
+                            The build action uses a internal state machine.
+                        </p>
+
                         <details class="spec-code-block">
                             <summary>View Brain::Update pseudocode</summary>
 
@@ -188,50 +224,47 @@ if there is a current action
 {
     update the action
 }</code></pre>
-
                             </div>
                         </details>
-                    </div>
 
-                    <div class="spec-feature-media">
-                        <video autoplay muted loop playsinline>
-                            <source src="../media/videos/specialization/build-house.mp4" type="video/mp4">
-                        </video>
                         <p class="spec-video-caption">
-                            The build action uses a internal state machine.
+                            At the core of the AI is a very simple update loop.
                         </p>
+
                     </div>
                 </section>
 
                 <section class="spec-section spec-feature-row reverse">
                     <div class="spec-feature-text">
                         <h2>Simulation & NPC Behaviour</h2>
+
                         <p>
-                            A typical NPC moves through a simple daily loop. They work, get hungry, eat, get tired,
-                            relax, and eventually go to sleep. This is not a fixed sequence. It comes from their needs
-                            and from what is currently available in the world.
+                            A typical NPC moves through a simple daily loop. They work, get hungry, eat,
+                            get tired, relax, and eventually go to sleep.
                         </p>
 
                         <p>
-                            The behaviour is also driven by a priority order. Hunger is checked first, then tiredness,
-                            then shared world tasks like building. If none of those take priority, the NPC falls back
-                            to its current schedule. Carriers also have special rules, since urgent food transport can
-                            override their normal work behaviour.
+                            This is not a fixed sequence. It comes from their needs and from what is
+                            currently happening in the world.
                         </p>
 
                         <p>
-                            Because hunger has a high priority, NPCs will try to eat as soon as possible.
+                            The behaviour is also driven by a priority order. Hunger is checked first,
+                            then tiredness, then shared world tasks like building.
                         </p>
 
                         <p>
-                            Before introducing reservation, this often caused multiple NPCs to go to the same
-                            restaurant at the same time, even if there wasn’t enough food.
+                            If none of those take priority, the NPC falls back to its current schedule.
                         </p>
 
                         <p>
-                            This was later fixed by adding a reservation system that made it possible for NPCs to
-                            reserve food
-                            before committing to an eating action.
+                            Carriers also have special rules, since urgent food transport can override
+                            their normal work behaviour.
+                        </p>
+
+                        <p>
+                            This means NPCs are not just following routines. They constantly react to
+                            changing conditions, which makes the simulation feel less scripted.
                         </p>
                     </div>
 
@@ -313,75 +346,43 @@ if there is a current action
 
                 <section class="spec-section spec-feature-row reverse">
                     <div class="spec-feature-text">
-                        <h2>Reservation & Task Ownership</h2>
+                        <h2>Reservation & Shared Resources</h2>
+
                         <p>
-                            What is reservation and why is it important?
+                            Something felt off when multiple NPCs chose the same restaurant.
                         </p>
 
                         <p>
-                            Reservation is the idea of “claiming” a resource ahead of time so others can’t use it at the same time.
-                        </p>
-                        <p>
-                            In my system it became necessary once multiple NPCs started interacting with the same resources, like food in a restaurant.
+                            They would all go there at the same time, eat until the food ran out,
+                            and then leave at the exact same moment.
                         </p>
 
                         <p>
-                            It wasn’t something I planned for early on which made it harder to add later.
+                            It looked unnatural and scripted.
                         </p>
 
                         <p>
-                            At first restaurants only tracked total food and NPCs just checked if any food existed.
-                            That worked fine until multiple NPCs started using the same restaurant.
+                            That was the reason I introduced a reservation system.
                         </p>
 
                         <p>
-                            When I added reservations NPCs would reserve food before arriving. That’s when things
-                            started breaking.
+                            Reservation means that an NPC claims a resource ahead of time,
+                            so others NPCs can’t use it at the same time.
                         </p>
 
                         <p>
-                            NPCs could see that a restaurant had food and decide to eat but the Eat action would fail
-                            because none of that
-                            food was actually available.
+                            Instead of only checking if food existed, NPCs would have to reserve food
+                            before committing to an eating action.
                         </p>
 
                         <p>
-                            The AI was still making decisions based on total food, while the eating logic needed
-                            available (non-reserved) food.
+                            I had already built a similar system for world resources, where NPCs reserve things
+                            like wood or food in the world.
                         </p>
 
                         <p>
-                            Carriers also still used the old logic and delivered based on total food so a restaurant
-                            could look like it had
-                            food while there was nothing usable.
-                        </p>
-
-                        <p>
-                            Fixing this meant touching several systems. The AI had to use reservation-aware queries,
-                            actions needed to reserve
-                            and release food correctly, and POIs had to track reserved and available food separately.
-                        </p>
-
-                        <p>
-                            After that, another issue showed up. NPCs would sometimes stop eating completely, even
-                            though food existed.
-                        </p>
-
-                        <p>
-                            This happened because the AI required too much available food before choosing to eat, and
-                            carriers prioritized
-                            delivery over their own needs.
-                        </p>
-
-                        <p>
-                            I fixed it by lowering the requirement and moving hunger higher in the priority. After that,
-                            behaviour started
-                            making sense again.
-                        </p>
-
-                        <p>
-                            The main issue was that different systems were using different definitions of what "available food"
-                            actually meant.
+                            That worked well, but it turned out to be much more complicated when applied to
+                            restaurants.
                         </p>
                     </div>
 
@@ -402,21 +403,81 @@ if there is a current action
                             </div>
 
                             <p class="spec-video-caption active">
-                                Multiple NPCs go to the same restaurant at the same time even though there isn’t enough food
-                                for all of them.
+                                The restaurant looks like it has enough food, so multiple NPCs choose the same place.
                             </p>
 
                             <p class="spec-video-caption">
-                                The restaurant behaviour after introducing reservation.
+                                After adding reservation, NPCs spread out based on what is actually available.
                             </p>
                         </div>
+                    </div>
+                </section>
+
+                <section class="spec-section spec-feature-row">
+                    <div class="spec-feature-text">
+                        <h2>When Reservation Broke the System</h2>
+
+                        <p>
+                            Reservation sounded like a good idea at first, but it caused a lot of problems,
+                            mainly because I hadn’t planned for it from the beginning.
+                        </p>
+
+                        <p>
+                            The main issue was that different systems were using different definitions
+                            of what "available food" actually meant.
+                        </p>
+
+                        <p>
+                            The AI could still choose a restaurant based on total food, while the eating
+                            logic required food that was not already reserved.
+                        </p>
+
+                        <p>
+                            This meant NPCs could commit to eating, walk to a restaurant, and then fail
+                            when they arrived because the food was already taken.
+                        </p>
+
+                        <p>
+                            Fixing this meant updating multiple systems to follow the same rules for
+                            reservation and availability.
+                        </p>
+                    </div>
+
+                    <div class="spec-feature-media">
+                        <div class="spec-build-video">
+                            <video autoplay muted loop playsinline>
+                                <source src="../media/videos/specialization/restaurant-broken.mp4" type="video/mp4">
+                            </video>
+
+                            <p class="spec-video-caption">
+                                The restaurant still has food, but none of it is actually available.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="spec-section spec-feature-row reverse">
+                    <div class="spec-feature-text">
+                        <h2>Task Ownership</h2>
+
+                        <p>
+                            The same idea is used for build sites, where only a limited number of NPCs can
+                            work at the same time.
+                        </p>
+
+                        <p>
+                            This was done mostly to make it look better instead of having every NPC in the world crowd around the same build site.
+                        </p>
+                    </div>
+
+                    <div class="spec-feature-media">
                         <div class="spec-build-video">
                             <video autoplay muted loop playsinline>
                                 <source src="../media/videos/specialization/build-reservation.mp4" type="video/mp4">
                             </video>
 
                             <p class="spec-video-caption">
-                                Build sites only allow a limited number of NPCs to reserve and work at the same time.
+                                Only a limited number of NPCs can work on the same build site at once.
                             </p>
                         </div>
                     </div>
@@ -430,8 +491,7 @@ if there is a current action
                     </p>
 
                     <p>
-                        A relatively small system like reservation ended up affecting AI decisions,
-                        resource flow and behaviour across the whole simulation.
+                        Reservation is a good example of that. It looked simple at first, but ended up affecting more parts of the game than I expected.
                     </p>
 
                     <p>
@@ -447,9 +507,7 @@ if there is a current action
                     </p>
 
                     <p>
-                        Overall, this project taught me a lot about building systems where behaviour
-                        comes from interactions instead of scripts, and how important it is to design
-                        them with shared concepts from the start.
+                        Overall, this project showed me how quickly things can get complicated when systems start interacting.
                     </p>
                 </section>
 
@@ -482,6 +540,7 @@ if there is a current action
                         If I were to expand the project I would introduce blocked areas and build pathfinding around
                         that.
                     </p>
+                    
                 </section>
             </div>
         </section>
