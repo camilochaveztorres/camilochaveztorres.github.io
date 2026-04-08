@@ -120,3 +120,27 @@ jobGalleries.forEach((gallery) => {
         });
     });
 });
+
+const aboutMainImage = document.getElementById('about-main-image');
+const aboutImageCaption = document.getElementById('about-image-caption');
+const aboutThumbs = document.querySelectorAll('.about-thumb');
+
+if (aboutMainImage && aboutImageCaption && aboutThumbs.length > 0) {
+    aboutThumbs.forEach((thumb) => {
+        thumb.addEventListener('click', () => {
+            const newImage = thumb.dataset.image;
+            const newCaption = thumb.dataset.caption;
+            const newAlt = thumb.dataset.alt;
+
+            aboutMainImage.src = newImage;
+            aboutMainImage.alt = newAlt || 'About image';
+            aboutImageCaption.textContent = newCaption || '';
+
+            aboutThumbs.forEach((button) => {
+                button.classList.remove('active');
+            });
+
+            thumb.classList.add('active');
+        });
+    });
+}
