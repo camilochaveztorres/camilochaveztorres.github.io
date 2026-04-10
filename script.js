@@ -75,7 +75,7 @@ const observer = new IntersectionObserver((entries) => {
         }
     });
 }, {
-    threshold: 0.5 // 50% måste synas
+    threshold: 0.5
 });
 
 videos.forEach(video => {
